@@ -1,0 +1,33 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Recompile Tailwind styles after security hardening",
+			"type": "shell",
+			"command": "npx.cmd @tailwindcss/cli -i ./input.css -o ./styles.css --minify",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Compile testimonial slider styles",
+			"type": "shell",
+			"command": "npx.cmd @tailwindcss/cli -i ./input.css -o ./styles.css --minify",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Compile final testimonial slider styles",
+			"type": "shell",
+			"command": "npx.cmd @tailwindcss/cli -i ./input.css -o ./styles.css --minify",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Compile testimonial navigation styles",
+			"type": "shell",
+			"command": "npx.cmd @tailwindcss/cli -i ./input.css -o ./styles.css --minify",
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}

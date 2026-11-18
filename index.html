@@ -1,0 +1,2703 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'nonce-lumina-csp-2026'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'none'; form-action 'self' https://api.web3forms.com; object-src 'none'; base-uri 'self'; frame-src 'none'; upgrade-insecure-requests"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link rel="icon" type="image/png" href="./images/winking-tooth-character-free-png.webp"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>
+  @layer base { 
+    html, body { margin: 0; padding: 0; scroll-behavior: smooth; } 
+    body { overscroll-behavior: none; } 
+    main > :first-child { margin-top: 0 !important; } 
+    main > :last-child { margin-bottom: 0 !important; } 
+  } 
+  ::-webkit-scrollbar { display: none; }
+
+  /* Smooth Custom Animations */
+  @keyframes heroFadeUp {
+    0% { opacity: 0; transform: translateY(28px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes heroCardReveal {
+    0% { opacity: 0; transform: scale(0.94) translateY(20px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  @keyframes gentleSheen {
+    0%, 100% { box-shadow: 0 8px 24px rgba(0, 101, 145, 0.28); }
+    50% { box-shadow: 0 10px 32px rgba(14, 165, 233, 0.45); }
+  }
+  @keyframes floatSlow {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+  }
+  .animate-float-slow {
+    animation: floatSlow 3s ease-in-out infinite;
+  }
+  .animate-float-slow:hover {
+    animation-play-state: paused;
+  }
+
+  .animate-hero-fade-1 { animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both; }
+  .animate-hero-fade-2 { animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both; }
+  .animate-hero-fade-3 { animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.34s both; }
+  .animate-hero-fade-4 { animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.46s both; }
+  .animate-hero-fade-5 { animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.58s both; }
+  .animate-hero-card { animation: heroCardReveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both; }
+  .pulse-sheen { animation: gentleSheen 3.5s ease-in-out infinite; }
+
+  /* Scroll Reveal Base Classes */
+  .reveal-init {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .reveal-active {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
+  /* Accessible Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    .reveal-init {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+</style><link rel="stylesheet" href="./styles.css"></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2.5 focus:bg-sky-700 focus:text-white focus:font-semibold focus:rounded-lg focus:shadow-2xl focus:outline-none focus:ring-4 focus:ring-sky-300">Skip to Main Content</a><aside class="w-full bg-error text-on-error py-2 px-4 shadow-sm z-50 sticky top-0" id="emergency-banner"><div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm"><div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-surface-container-lowest animate-ping"></span><strong class="uppercase tracking-wider font-bold">24/7 Emergency Dental</strong><span>Severe tooth pain, broken crown or trauma? Immediate priority slot in under 60 mins.</span></div><div class="flex items-center gap-3"><a class="px-3 py-1 bg-surface-container-lowest text-error font-bold rounded-lg shadow-sm hover:bg-surface-container flex items-center gap-1 text-xs" href="tel:18005864621"><span class="material-symbols-outlined text-sm">phone_in_talk</span><span>Call 1 (800) 586-4621</span></a></div></div></aside><header class="fixed top-0 w-full z-50 bg-surface/75 backdrop-blur-md transition-all duration-300" id="main-header"><div class="h-20 max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="LuminaDental Logo" class="h-8 w-auto object-contain transition-transform duration-300 hover:scale-105"><a class="font-title-lg text-title-lg tracking-tight text-on-surface hover:text-primary transition-colors" data-path="home" href="#home">Lumina<span class="text-primary-container font-extrabold">Dental</span></a></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="bg-surface-container-high text-primary font-bold rounded-lg"><a aria-current="page" class="px-3 py-2 transition-all duration-300 bg-surface-container-high text-primary font-bold rounded-lg hover:scale-[1.02]" data-path="home" href="#home">Home</a><a class="px-3 py-2 text-on-surface-variant hover:text-on-surface transition-all duration-300 font-label-md text-label-md rounded-lg hover:bg-surface-container/60 hover:scale-[1.02]" data-path="about" href="#about">About</a><a class="px-3 py-2 text-on-surface-variant hover:text-on-surface transition-all duration-300 font-label-md text-label-md rounded-lg hover:bg-surface-container/60 hover:scale-[1.02]" data-path="services" href="#services">Services</a><a class="px-3 py-2 text-on-surface-variant hover:text-on-surface transition-all duration-300 font-label-md text-label-md rounded-lg hover:bg-surface-container/60 hover:scale-[1.02]" data-path="doctors" href="#doctors">Doctors</a><a class="px-3 py-2 text-on-surface-variant hover:text-on-surface transition-all duration-300 font-label-md text-label-md rounded-lg hover:bg-surface-container/60 hover:scale-[1.02]" data-path="testimonials" href="#testimonials">Testimonials</a><a class="px-3 py-2 text-on-surface-variant hover:text-on-surface transition-all duration-300 font-label-md text-label-md rounded-lg hover:bg-surface-container/60 hover:scale-[1.02]" data-path="gallery" href="#gallery">Gallery</a><a class="px-3 py-2 text-on-surface-variant hover:text-on-surface transition-all duration-300 font-label-md text-label-md rounded-lg hover:bg-surface-container/60 hover:scale-[1.02]" data-path="faq" href="#faq">FAQ</a><a class="px-3 py-2 text-on-surface-variant hover:text-on-surface transition-all duration-300 font-label-md text-label-md rounded-lg hover:bg-surface-container/60 hover:scale-[1.02]" data-path="contact" href="#contact">Contact</a></nav><div class="hidden md:flex items-center gap-space-md"><a class="flex items-center gap-1.5 font-label-md text-label-md text-secondary hover:text-on-secondary-container transition-all duration-300 py-2 px-3 rounded-lg hover:bg-secondary-container/30 hover:scale-[1.02]" href="tel:18005864621"><span class="material-symbols-outlined text-base">call</span><span>+1 (800) 586-4621</span></a><a class="inline-flex items-center justify-center h-12 px-6 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md tracking-wider uppercase transition-all duration-300 shadow-[0_4px_16px_rgba(14,165,233,0.35)] hover:shadow-[0_6px_22px_rgba(14,165,233,0.5)] hover:bg-tertiary hover:scale-[1.02] active:scale-[0.98] focus:outline-none" data-path="book-appointment" href="#quick-booking">Book Appointment</a><div class="pl-2"><img alt="Profile" class="w-8 h-8 rounded-full object-cover transition-transform duration-300 hover:ring-2 hover:ring-primary/40" src="./images/profile-avatar.jpg"></div></div><div class="flex xl:hidden items-center gap-space-sm"><a aria-label="Call Clinic" class="md:hidden p-2 rounded-lg bg-surface-container text-secondary hover:bg-secondary-container transition-all duration-300 active:scale-95" href="tel:18005864621"><span class="material-symbols-outlined">call</span></a><button aria-label="Toggle Navigation Drawer" class="p-2 rounded-lg text-on-surface hover:bg-surface-container transition-all duration-300 focus:outline-none active:scale-95" id="mobile-nav-toggle" type="button"><span class="material-symbols-outlined">menu</span></button></div></div></header><div class="fixed inset-0 z-50 pointer-events-none transition-opacity duration-300 opacity-0 xl:hidden" id="mobile-nav-drawer"><div class="absolute inset-0 bg-on-surface/40 backdrop-blur-sm" id="mobile-backdrop"></div><aside class="absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-surface-container-lowest shadow-2xl p-space-lg flex flex-col justify-between overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out"><div class="space-y-space-md"><div class="flex items-center justify-between pb-space-sm"><div class="flex items-center gap-space-xs"><img alt="LuminaDental Logo" class="h-7 w-auto object-contain"><span class="font-title-lg text-title-lg tracking-tight text-on-surface">Lumina<span class="text-primary-container font-bold">Dental</span></span></div><button aria-label="Close Navigation Drawer" class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" id="mobile-nav-close" type="button"><span class="material-symbols-outlined">close</span></button></div><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container text-primary font-bold rounded-lg"><a aria-current="page" class="px-4 py-3 transition-colors bg-surface-container text-primary font-bold rounded-lg" data-path="home" href="#home">Home</a><a class="px-4 py-3 rounded-lg font-title-lg text-title-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="about" href="#about">About</a><a class="px-4 py-3 rounded-lg font-title-lg text-title-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="services" href="#services">Services</a><a class="px-4 py-3 rounded-lg font-title-lg text-title-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="doctors" href="#doctors">Doctors</a><a class="px-4 py-3 rounded-lg font-title-lg text-title-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="testimonials" href="#testimonials">Testimonials</a><a class="px-4 py-3 rounded-lg font-title-lg text-title-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="gallery" href="#gallery">Gallery</a><a class="px-4 py-3 rounded-lg font-title-lg text-title-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="faq" href="#faq">FAQ</a><a class="px-4 py-3 rounded-lg font-title-lg text-title-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="contact" href="#contact">Contact</a></nav></div><div class="space-y-space-md pt-space-lg"><a class="flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-surface-container text-secondary font-label-md text-label-md" href="tel:18005864621"><span class="material-symbols-outlined text-base">call</span><span>+1 (800) 586-4621</span></a><a class="flex items-center justify-center w-full h-12 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider shadow-[0_4px_16px_rgba(14,165,233,0.35)]" data-path="book-appointment" href="#quick-booking">Book Appointment</a></div></aside></div><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]" id="main-content"><div class="flex flex-col w-full">
+
+<!-- SECTION 1: HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container-low/60 via-surface to-surface pb-20 pt-8 lg:pt-12 reveal-active" id="home">
+<!-- Ambient Luminous Glow Orbs -->
+<div class="pointer-events-none absolute -top-24 left-1/4 h-96 w-96 rounded-full bg-primary-fixed/40 blur-3xl opacity-60"></div>
+<div class="pointer-events-none absolute top-1/3 -right-20 h-96 w-96 rounded-full bg-secondary-fixed/50 blur-3xl opacity-50"></div>
+<div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Left Column: Patient Trust Messaging -->
+<div class="lg:col-span-7 flex flex-col space-y-space-md z-10">
+<!-- Clinic Quality Tag -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary-container/50 w-fit text-on-secondary-container animate-hero-fade-1">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Painless Sanctuary Dentistry • Boston &amp; Metro</span>
+</div>
+<!-- Main Hero Headline -->
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight leading-tight animate-hero-fade-2">
+            Excellence in Modern Dentistry, Crafted for Your <span class="text-primary font-extrabold underline decoration-secondary/30 underline-offset-8">Confident Smile</span>.
+          </h1>
+<!-- Reassuring Subheadline -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl animate-hero-fade-3">
+            Experience high-definition 3D imaging, non-invasive laser treatments, and genuine empathy. We make dental care relaxing, deeply comfortable, and life-changing.
+          </p>
+<!-- Primary CTAs -->
+<div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md animate-hero-fade-4">
+<a class="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-xl bg-primary text-on-primary font-label-md text-label-md tracking-wider uppercase transition-all duration-300 pulse-sheen hover:bg-tertiary hover:scale-[1.02] active:scale-[0.98]" href="#quick-booking">
+<span class="material-symbols-outlined text-lg">calendar_month</span>
+<span>Book Appointment</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 h-14 px-7 rounded-xl bg-surface-container-high text-secondary hover:bg-secondary-container transition-all duration-300 font-label-md text-label-md hover:scale-[1.02] active:scale-[0.98]" href="tel:18005864621">
+<span class="material-symbols-outlined text-lg">call</span>
+<span>Call: +1 (800) 586-4621</span>
+</a>
+</div>
+<!-- Trust Proof Bar -->
+<div class="pt-6 border-t-0 flex flex-wrap items-center gap-y-3 gap-x-6 animate-hero-fade-5">
+<div class="flex items-center gap-2">
+<div class="flex text-amber-500 text-sm">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">4.9/5 Rating (1,400+ Reviews)</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-base">verified</span>
+<span>ADA Certified Clinic</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-base text-primary">workspace_premium</span>
+<span>Top Dental Practice 2025</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-base">spa</span>
+<span>100% Pain-Free Guarantee</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Hero Doctor Visual with Glass Micro-Cards -->
+<div class="lg:col-span-5 relative flex justify-center mt-8 lg:mt-0 animate-hero-card">
+<!-- Background Geometric Radial Disc -->
+<div class="absolute inset-0 m-auto w-72 h-72 md:w-96 md:h-96 rounded-full bg-gradient-to-tr from-secondary-container to-primary-fixed opacity-70 blur-xl"></div>
+<div class="relative w-full max-w-md aspect-square rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(19,27,46,0.12)] bg-surface-container-low group">
+<img alt="Dr. Elena Vance, DDS - Lead Practitioner at LuminaDental" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" src="./images/profile-avatar.jpg">
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/50 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-between shadow-sm transition-all duration-300 group-hover:bg-surface-container-lowest/95">
+<div>
+<p class="font-title-lg text-title-lg text-on-surface">Dr. Elena Vance, DDS</p>
+<p class="font-body-sm text-body-sm text-primary">Chief Implantologist &amp; Cosmetic Dentist</p>
+</div>
+<span class="p-2 rounded-lg bg-primary-fixed text-primary transition-transform duration-300 group-hover:scale-110">
+<span class="material-symbols-outlined text-lg">medical_services</span>
+</span>
+</div>
+</div>
+<!-- Micro Card 1: Live Pulse Next Available -->
+<div class="absolute -top-4 -left-4 sm:left-2 p-3.5 rounded-2xl bg-surface-container-lowest/95 backdrop-blur-xl shadow-xl flex items-center gap-3 transition-transform duration-300 hover:scale-105">
+<div class="relative flex items-center justify-center w-8 h-8 rounded-full bg-secondary-container">
+<span class="absolute w-3 h-3 rounded-full bg-secondary animate-ping opacity-75"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Next Available Slot</p>
+<p class="font-label-md text-label-md text-on-surface">Today at 2:30 PM</p>
+</div>
+</div>
+<!-- Micro Card 2: Pain-Free Technology -->
+<div class="absolute -bottom-6 -right-2 sm:right-0 p-3.5 rounded-2xl bg-surface-container-lowest/95 backdrop-blur-xl shadow-xl flex items-center gap-3 transition-transform duration-300 hover:scale-105">
+<div class="p-2 rounded-xl bg-primary-container text-on-primary">
+<span class="material-symbols-outlined text-lg">verified_user</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Pain-Free Tech</p>
+<p class="font-body-sm text-body-sm text-secondary">Laser &amp; Gentle Sedation</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section class="w-full bg-surface-container-lowest border-y border-outline-variant/30 py-8" id="insurance-partners"><div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop"><div class="flex flex-col lg:flex-row items-center justify-between gap-6"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-xl bg-secondary-container/50 text-secondary flex items-center justify-center"><span class="material-symbols-outlined text-xl">verified_user</span></div><div><p class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Direct In-Network Partners</p><p class="font-body-sm text-body-sm text-on-surface-variant">Maximize your coverage with zero surprise billing</p></div></div><div class="flex flex-wrap items-center justify-center gap-2.5"><span class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-xs border border-outline-variant/30">Delta Dental</span><span class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-xs border border-outline-variant/30">MetLife</span><span class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-xs border border-outline-variant/30">Cigna Dental</span><span class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-xs border border-outline-variant/30">Guardian</span><span class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-xs border border-outline-variant/30">Aetna</span><span class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-xs border border-outline-variant/30">Humana</span><span class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-xs border border-outline-variant/30">BlueCross BlueShield</span><span class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-xs border border-outline-variant/30">UnitedHealthcare</span></div><a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-surface-container text-primary font-label-md text-xs hover:bg-primary-fixed/60 transition-all" href="#cost-estimator"><span class="material-symbols-outlined text-sm">check_circle</span><span>Verify Coverage</span></a></div></div></section>
+<!-- SECTION 2: STATISTICS SECTION (Key Practice Metrics with Animated Counters) -->
+<section class="w-full bg-surface-container py-14" id="about">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter" id="stats-container">
+<!-- Metric 1 -->
+<div class="reveal-init p-6 rounded-2xl bg-surface-container-lowest shadow-[0_4px_20px_rgba(19,27,46,0.04)] flex flex-col justify-center items-center text-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg reveal-active">
+<span class="font-headline-lg text-headline-lg text-primary font-bold"><span class="stat-counter" data-format="comma" data-suffix="+" data-target="18500">18,500+</span></span>
+<span class="font-title-lg text-title-lg text-on-surface mt-1">Happy Patients</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Treated with lifelong precision</span>
+</div>
+<!-- Metric 2 -->
+<div class="reveal-init p-6 rounded-2xl bg-surface-container-lowest shadow-[0_4px_20px_rgba(19,27,46,0.04)] flex flex-col justify-center items-center text-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg reveal-active">
+<span class="font-headline-lg text-headline-lg text-secondary font-bold"><span class="stat-counter" data-format="integer" data-suffix="+" data-target="22">22+</span></span>
+<span class="font-title-lg text-title-lg text-on-surface mt-1">Years Clinical Mastery</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Harvard &amp; Columbia fellows</span>
+</div>
+<!-- Metric 3 -->
+<div class="reveal-init p-6 rounded-2xl bg-surface-container-lowest shadow-[0_4px_20px_rgba(19,27,46,0.04)] flex flex-col justify-center items-center text-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg reveal-active">
+<span class="font-headline-lg text-headline-lg text-primary font-bold"><span class="stat-counter" data-format="decimal" data-suffix="%" data-target="99.4">99.4%</span></span>
+<span class="font-title-lg text-title-lg text-on-surface mt-1">Success Rate</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Documented implant longevity</span>
+</div>
+<!-- Metric 4 -->
+<div class="reveal-init p-6 rounded-2xl bg-surface-container-lowest shadow-[0_4px_20px_rgba(19,27,46,0.04)] flex flex-col justify-center items-center text-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg reveal-active">
+<span class="font-headline-lg text-headline-lg text-tertiary-container font-bold"><span class="stat-counter" data-format="decimal" data-suffix=" / 5" data-target="4.9">4.9 / 5</span></span>
+<span class="font-title-lg text-title-lg text-on-surface mt-1">Patient Rating</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Google &amp; ZocDoc verified</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: COMPREHENSIVE SERVICES GRID (6 Core Treatments) -->
+<section class="w-full py-20 bg-surface" id="services">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop space-y-space-xl">
+<!-- Section Header -->
+<div class="max-w-2xl reveal-init reveal-active">
+<p class="font-label-md text-label-md text-secondary uppercase tracking-widest">Exceptional Oral Care Portfolio</p>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2 tracking-tight">Precision Treatments Designed for Absolute Comfort</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3">From holistic preventative hygiene to computerized cosmetic design, every procedure operates under our zero-trauma ethos.</p>
+</div>
+<!-- Services Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter-desktop">
+<!-- Treatment 1 -->
+<div class="reveal-init group p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_8px_30px_rgba(19,27,46,0.04)] hover:shadow-[0_16px_36px_rgba(14,165,233,0.18)] hover:-translate-y-1.5 transition-all duration-300 ease-out flex flex-col justify-between reveal-active">
+<div>
+<div class="w-14 h-14 rounded-xl bg-secondary-container/50 text-secondary flex items-center justify-center group-hover:scale-110 group-hover:bg-secondary-container transition-all duration-300">
+<span class="material-symbols-outlined text-2xl">clean_hands</span>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface">Preventive</span>
+<span class="font-label-md text-label-md text-secondary">From $149</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mt-3 group-hover:text-primary transition-colors duration-300">Teeth Cleaning &amp; Prevention</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Gentle air-flow ultrasonic scaling, deep stain elimination, oral cancer diagnostics, and remineralizing fluoride glaze.</p>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between">
+<a class="font-label-md text-label-md text-primary hover:text-primary-container transition-all duration-300 flex items-center gap-1 group-hover:translate-x-1" href="#quick-booking">
+<span>Book Session</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<span class="font-label-sm text-label-sm text-outline">45 Mins</span>
+</div>
+</div>
+<!-- Treatment 2 -->
+<div class="reveal-init group p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_8px_30px_rgba(19,27,46,0.04)] hover:shadow-[0_16px_36px_rgba(14,165,233,0.18)] hover:-translate-y-1.5 transition-all duration-300 ease-out flex flex-col justify-between reveal-active">
+<div>
+<div class="w-14 h-14 rounded-xl bg-primary-fixed text-primary flex items-center justify-center group-hover:scale-110 group-hover:bg-primary-fixed/80 transition-all duration-300">
+<span class="material-symbols-outlined text-2xl">dentistry</span>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface">Restorative</span>
+<span class="font-label-md text-label-md text-secondary">Custom Plans</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mt-3 group-hover:text-primary transition-colors duration-300">Dental Implants</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Computer-guided 3D placement using medical-grade titanium and biocompatible zirconia crowns backed by a lifetime warranty.</p>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between">
+<a class="font-label-md text-label-md text-primary hover:text-primary-container transition-all duration-300 flex items-center gap-1 group-hover:translate-x-1" href="#quick-booking">
+<span>Book Consultation</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<span class="font-label-sm text-label-sm text-outline">Lifetime Warranty</span>
+</div>
+</div>
+<!-- Treatment 3 -->
+<div class="reveal-init group p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_8px_30px_rgba(19,27,46,0.04)] hover:shadow-[0_16px_36px_rgba(14,165,233,0.18)] hover:-translate-y-1.5 transition-all duration-300 ease-out flex flex-col justify-between reveal-active">
+<div>
+<div class="w-14 h-14 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center group-hover:scale-110 group-hover:bg-secondary-fixed/80 transition-all duration-300">
+<span class="material-symbols-outlined text-2xl">biotech</span>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface">Endodontics</span>
+<span class="font-label-md text-label-md text-secondary">Zero-Pain</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mt-3 group-hover:text-primary transition-colors duration-300">Root Canal Therapy</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Single-visit microscope-assisted root canal procedures. 100% painless local sedation designed to preserve your natural tooth.</p>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between">
+<a class="font-label-md text-label-md text-primary hover:text-primary-container transition-all duration-300 flex items-center gap-1 group-hover:translate-x-1" href="#quick-booking">
+<span>Reserve Care</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<span class="font-label-sm text-label-sm text-outline">Single Visit</span>
+</div>
+</div>
+<!-- Treatment 4 -->
+<div class="reveal-init group p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_8px_30px_rgba(19,27,46,0.04)] hover:shadow-[0_16px_36px_rgba(14,165,233,0.18)] hover:-translate-y-1.5 transition-all duration-300 ease-out flex flex-col justify-between reveal-active">
+<div>
+<div class="w-14 h-14 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center group-hover:scale-110 group-hover:bg-tertiary-fixed/80 transition-all duration-300">
+<span class="material-symbols-outlined text-2xl">sentiment_satisfied</span>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface">Orthodontics</span>
+<span class="font-label-md text-label-md text-secondary">Diamond Provider</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mt-3 group-hover:text-primary transition-colors duration-300">Orthodontics &amp; Clear Braces</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Invisalign Diamond certified treatment. 3D digital outcome simulations preview your straight new smile before day one.</p>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between">
+<a class="font-label-md text-label-md text-primary hover:text-primary-container transition-all duration-300 flex items-center gap-1 group-hover:translate-x-1" href="#quick-booking">
+<span>Get Free 3D Scan</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<span class="font-label-sm text-label-sm text-outline">6-18 Months</span>
+</div>
+</div>
+<!-- Treatment 5 -->
+<div class="reveal-init group p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_8px_30px_rgba(19,27,46,0.04)] hover:shadow-[0_16px_36px_rgba(14,165,233,0.18)] hover:-translate-y-1.5 transition-all duration-300 ease-out flex flex-col justify-between reveal-active">
+<div>
+<div class="w-14 h-14 rounded-xl bg-primary-container text-on-primary flex items-center justify-center group-hover:scale-110 group-hover:bg-primary transition-all duration-300">
+<span class="material-symbols-outlined text-2xl">auto_fix_high</span>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface">Cosmetic</span>
+<span class="font-label-md text-label-md text-secondary">Artisan Lab</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mt-3 group-hover:text-primary transition-colors duration-300">Cosmetic Veneers &amp; Makeovers</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Ultra-thin handcrafted porcelain veneers, laser gum symmetry reshaping, and natural luminescence smile makeovers.</p>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between">
+<a class="font-label-md text-label-md text-primary hover:text-primary-container transition-all duration-300 flex items-center gap-1 group-hover:translate-x-1" href="#quick-booking">
+<span>Smile Design Session</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<span class="font-label-sm text-label-sm text-outline">2 Visits</span>
+</div>
+</div>
+<!-- Treatment 6 -->
+<div class="reveal-init group p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_8px_30px_rgba(19,27,46,0.04)] hover:shadow-[0_16px_36px_rgba(186,26,26,0.18)] hover:-translate-y-1.5 transition-all duration-300 ease-out flex flex-col justify-between reveal-active">
+<div>
+<div class="w-14 h-14 rounded-xl bg-error-container text-error flex items-center justify-center group-hover:scale-110 group-hover:bg-error group-hover:text-on-error transition-all duration-300">
+<span class="material-symbols-outlined text-2xl">health_and_safety</span>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase px-2.5 py-1 rounded-full bg-error/10 text-error">Priority Access</span>
+<span class="font-label-md text-label-md text-error">Within 60 Mins</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mt-3 group-hover:text-error transition-colors duration-300">24/7 Emergency Dental Care</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Immediate relief for acute toothache, broken crowns, sports impact injuries, and knocked-out teeth. On-call surgeons.</p>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between">
+<a class="font-label-md text-label-md text-error hover:text-error/80 transition-all duration-300 flex items-center gap-1 group-hover:translate-x-1" href="tel:18005864621">
+<span>Call Triage Desk</span>
+<span class="material-symbols-outlined text-sm">emergency</span>
+</a>
+<span class="font-label-sm text-label-sm text-outline">24/7 Hotline</span>
+</div>
+</div>
+</div>
+</div>
+</section><section class="w-full py-20 bg-surface-container-low" id="cost-estimator"><div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop space-y-space-xl"><div class="text-center max-w-2xl mx-auto"><span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Transparent Pricing</span><h2 class="font-headline-lg text-headline-lg text-on-surface mt-2 tracking-tight">Treatment Cost Estimator &amp; Insurance Verification</h2><p class="font-body-md text-body-md text-on-surface-variant mt-2">Calculate estimated out-of-pocket costs and check your benefits in real time before scheduling your appointment.</p></div><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start"><div class="lg:col-span-7 p-8 rounded-3xl bg-surface-container-lowest shadow-md space-y-6"><h3 class="font-title-lg text-title-lg text-on-surface flex items-center gap-2"><span class="material-symbols-outlined text-primary">calculate</span><span>Instant Treatment Price Calculator</span></h3><div class="space-y-4"><div><label class="block font-label-md text-label-md text-on-surface mb-1.5">Select Planned Procedure</label><select class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface focus:ring-2 focus:ring-primary focus:outline-none transition-all text-sm"><option value="149">Routine Dental Cleaning &amp; Diagnostic X-Rays (~$149)</option><option value="1400">Single Artisan Porcelain Veneer (~$1,400)</option><option value="2850">Complete 3D-Guided Dental Implant (~$2,850)</option><option value="3800">Full Invisalign Clear Aligner Comprehensive (~$3,800)</option><option value="950">Microscope Root Canal Treatment (~$950)</option></select></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div><label class="block font-label-md text-label-md text-on-surface mb-1.5">Coverage Level</label><select class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface focus:ring-2 focus:ring-primary focus:outline-none transition-all text-sm"><option value="ppo-standard">Premier PPO (Approx. 80% coverage)</option><option value="ppo-basic">Basic PPO (Approx. 50% coverage)</option><option value="self-pay">Self-Pay / Lumina Wellness Plan (20% off)</option><option value="financing">0% APR Financing (24 Months)</option></select></div><div><label class="block font-label-md text-label-md text-on-surface mb-1.5">Number of Teeth / Units</label><input class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface focus:ring-2 focus:ring-primary focus:outline-none transition-all text-sm" max="12" min="1" type="number" value="1"></div></div><div class="p-5 rounded-2xl bg-surface-container-low border border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-4"><div><p class="font-label-sm text-label-sm text-outline uppercase">Estimated Patient Responsibility</p><p class="font-headline-lg text-headline-lg text-primary font-bold mt-1">$298 – $570</p><p class="font-body-sm text-body-sm text-secondary mt-0.5">Or as low as $29/mo with CareCredit 0% APR</p></div><a class="px-5 py-3 rounded-xl bg-primary text-on-primary font-label-md text-xs uppercase tracking-wider hover:bg-tertiary transition-all" href="#quick-booking">Lock in Estimate</a></div></div></div><div class="lg:col-span-5 p-8 rounded-3xl bg-surface-container-lowest shadow-md space-y-5"><h3 class="font-title-lg text-title-lg text-on-surface flex items-center gap-2"><span class="material-symbols-outlined text-secondary">shield</span><span>Quick Insurance Benefit Check</span></h3><p class="font-body-sm text-body-sm text-on-surface-variant">Our concierge will check your remaining annual deductible and co-pay allowances in minutes.</p><form class="space-y-3.5"><input class="w-full h-11 px-4 rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline text-sm focus:ring-2 focus:ring-primary focus:outline-none" placeholder="Insurance Carrier (e.g. Delta, Cigna, MetLife)" type="text"><input class="w-full h-11 px-4 rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline text-sm focus:ring-2 focus:ring-primary focus:outline-none" placeholder="Member ID or Policy #" type="text"><input class="w-full h-11 px-4 rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline text-sm focus:ring-2 focus:ring-primary focus:outline-none" placeholder="Primary Policyholder Full Name" type="text"><button class="w-full h-12 rounded-xl bg-secondary text-on-secondary font-label-md text-xs uppercase tracking-wider hover:bg-secondary-fixed-dim transition-all" type="button">Verify Coverage Now</button><p class="text-center font-body-sm text-xs text-outline flex items-center justify-center gap-1"><span class="material-symbols-outlined text-xs text-secondary">lock</span><span>Encrypted and HIPAA secure submission</span></p></form></div></div></div></section>
+<!-- SECTION 4: MEET THE DOCTORS (Specialist Dental Team) -->
+<section class="w-full py-20 bg-surface-container-low" id="doctors">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop space-y-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 reveal-init reveal-active">
+<div>
+<p class="font-label-md text-label-md text-secondary uppercase tracking-widest">Renowned Clinicians</p>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2 tracking-tight">Meet Your Dental Specialists</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Our board-certified dentists combine clinical faculty experience at top academic hospitals with gentle, comforting bedside manners.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+<!-- Doctor 1: Dr. Elena Vance -->
+<div class="reveal-init rounded-2xl bg-surface-container-lowest overflow-hidden shadow-lg flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl group reveal-active">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img alt="Dr. Elena Vance DDS - Chief Implantologist" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" src="./images/profile-avatar.jpg">
+<div class="absolute top-3 right-3 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm font-label-sm text-label-sm text-primary shadow-sm">
+              15+ Years Exp
+            </div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Dr. Elena Vance, DDS</h3>
+<p class="font-body-sm text-body-sm text-primary font-medium">Chief Implantologist &amp; Cosmetic Dentist</p>
+<div class="mt-2 flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Harvard Dental</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">ICOI Fellow</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container/50 font-label-sm text-label-sm text-secondary">Aesthetic Master</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-3">Specializes in smile transformations, porcelain veneers, and computer-guided implant restorations with a calm, empathetic focus.</p>
+</div>
+<a class="w-full py-3 rounded-lg bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] text-center font-label-md text-label-md" href="#quick-booking">
+              Book with Dr. Vance
+            </a>
+</div>
+</div>
+<!-- Doctor 2: Dr. Marcus Sterling -->
+<div class="reveal-init rounded-2xl bg-surface-container-lowest overflow-hidden shadow-lg flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl group reveal-active">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" data-alt="Professional studio portrait headshot of a friendly confident male orthodontist in his early 40s wearing navy modern medical scrubs, pleasant trustworthy expression, bright clinic background with subtle architectural lines, natural daylight aesthetic" src="./images/doctor-specialist-1.jpg">
+<div class="absolute top-3 right-3 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm font-label-sm text-label-sm text-primary shadow-sm">
+              12+ Years Exp
+            </div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Dr. Marcus Sterling, DMD</h3>
+<p class="font-body-sm text-body-sm text-secondary font-medium">Specialist Orthodontist &amp; Invisalign Fellow</p>
+<div class="mt-2 flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Columbia Univ.</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">AAO Member</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container/50 font-label-sm text-label-sm text-secondary">Diamond Provider</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-3">Pioneering clear aligner mechanics and adult smile harmony without invasive extractions or traditional metal hardware.</p>
+</div>
+<a class="w-full py-3 rounded-lg bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] text-center font-label-md text-label-md" href="#quick-booking">
+              Book with Dr. Sterling
+            </a>
+</div>
+</div>
+<!-- Doctor 3: Dr. Sophia Chen -->
+<div class="reveal-init rounded-2xl bg-surface-container-lowest overflow-hidden shadow-lg flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl group reveal-active">
+<div class="relative w-full aspect-square bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" data-alt="Warm and approachable studio portrait of an Asian female dentist in her late 30s wearing white modern clinical coat with a soft pastel stethoscope, reassuring compassionate smile, soft sunlit medical suite background with lush greenery in bokeh" src="./images/doctor-specialist-2.jpg">
+<div class="absolute top-3 right-3 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm font-label-sm text-label-sm text-primary shadow-sm">
+              10+ Years Exp
+            </div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Dr. Sophia Chen, DDS</h3>
+<p class="font-body-sm text-body-sm text-tertiary font-medium">Pediatric &amp; Preventive Specialist</p>
+<div class="mt-2 flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">UCSF Dentistry</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">AAPD Certified</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container/50 font-label-sm text-label-sm text-secondary">Anxiety Specialist</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-3">Renowned for eliminating dental apprehension in nervous adults and children with calm pacing and gentle sensory adjustments.</p>
+</div>
+<a class="w-full py-3 rounded-lg bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] text-center font-label-md text-label-md" href="#quick-booking">
+              Book with Dr. Chen
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: PATIENT TESTIMONIALS (With Interactive Carousel Controls) -->
+<section class="w-full py-20 bg-surface" id="testimonials">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop space-y-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 reveal-init reveal-active">
+<div>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Real Patient Stories</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2 tracking-tight">Smiles Restored, Anxiety Erased</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Hear directly from patients who transformed their smiles and their relationship with dental care.</p>
+</div>
+<!-- Carousel Navigation Buttons -->
+<div class="flex items-center gap-2 self-start md:self-auto">
+<button aria-label="Previous Testimonial" class="w-10 h-10 rounded-full border border-outline-variant bg-surface-container-lowest text-on-surface flex items-center justify-center hover:bg-surface-container transition-all duration-300 hover:scale-105 active:scale-95" id="testimonial-prev" type="button">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<button aria-label="Next Testimonial" class="w-10 h-10 rounded-full border border-outline-variant bg-surface-container-lowest text-on-surface flex items-center justify-center hover:bg-surface-container transition-all duration-300 hover:scale-105 active:scale-95" id="testimonial-next" type="button">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex flex-nowrap overflow-x-auto snap-x snap-mandatory scroll-smooth gap-4 pb-2 md:grid md:grid-cols-3 md:overflow-visible [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden" id="testimonials-grid">
+<!-- Review 1 -->
+<div class="reveal-init testimonial-card w-[85%] sm:w-[65%] md:w-auto min-w-[85%] sm:min-w-[65%] md:min-w-0 snap-center shrink-0 p-8 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between space-y-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl reveal-active">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/60 font-label-sm text-label-sm text-on-secondary-container">Full Mouth Implants</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+              "I avoided the dentist for nearly 14 years due to severe phobia. Dr. Vance was incredibly patient, and the sedation procedure was genuinely painless. I left with full confidence and my life back."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-4 border-t-0">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold font-title-lg">
+              JM
+            </div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Jonathan Miller</p>
+<div class="flex items-center gap-1 text-secondary text-xs">
+<span class="material-symbols-outlined text-xs">verified</span>
+<span>Verified Patient</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="reveal-init testimonial-card w-[85%] sm:w-[65%] md:w-auto min-w-[85%] sm:min-w-[65%] md:min-w-0 snap-center shrink-0 p-8 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between space-y-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl reveal-active ring-2 ring-primary/20">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed/60 font-label-sm text-label-sm text-primary">Invisalign Treatment</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+              "The 3D preview Dr. Sterling created was exact down to the millimeter. In just 7 months my teeth are aligned, and nobody at work even noticed I was wearing clear aligners."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-4 border-t-0">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary font-bold font-title-lg">
+              SR
+            </div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Sarah Ramirez</p>
+<div class="flex items-center gap-1 text-secondary text-xs">
+<span class="material-symbols-outlined text-xs">verified</span>
+<span>Verified Patient</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="reveal-init testimonial-card w-[85%] sm:w-[65%] md:w-auto min-w-[85%] sm:min-w-[65%] md:min-w-0 snap-center shrink-0 p-8 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between space-y-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl reveal-active">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/60 font-label-sm text-label-sm text-secondary">Porcelain Veneers</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+              "The clinic feels more like a serene wellness retreat than a medical facility. The porcelain craftsmanship is hyper-natural. Not fake chalky white, but luminous and perfect."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-4 border-t-0">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary font-bold font-title-lg">
+              CK
+            </div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Claire Kensington</p>
+<div class="flex items-center gap-1 text-secondary text-xs">
+<span class="material-symbols-outlined text-xs">verified</span>
+<span>Verified Patient</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Testimonial Indicators -->
+<div class="flex items-center justify-center gap-2 pt-2" id="testimonial-dots">
+<span class="w-2 h-2 rounded-full bg-outline-variant hover:bg-primary/50 transition-all duration-300 dot-indicator cursor-pointer" data-idx="0"></span>
+<span class="w-8 h-2 rounded-full bg-primary transition-all duration-300 dot-indicator cursor-pointer" data-idx="1"></span>
+<span class="w-2 h-2 rounded-full bg-outline-variant hover:bg-primary/50 transition-all duration-300 dot-indicator cursor-pointer" data-idx="2"></span>
+</div>
+</div>
+</section>
+<!-- SECTION 6: BEFORE & AFTER INTERACTIVE GALLERY -->
+<section class="w-full py-20 bg-surface-container-low" id="gallery">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop space-y-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 reveal-init reveal-active">
+<div>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Clinical Portfolio</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2 tracking-tight">Verified Transformation Results</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Every smile is individually designed to align with facial aesthetics, lip curvature, and natural enamel translucence.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter-desktop">
+<!-- Case 1 -->
+<div class="reveal-init rounded-2xl bg-surface-container-lowest overflow-hidden shadow-lg flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl group reveal-active">
+<div class="relative w-full h-64 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="High-resolution clinical dental macro photograph split comparison showing teeth before with micro-chips and yellowing, and teeth after with luminous handcrafted porcelain veneers with immaculate gum line integration" src="./images/gallery-veneers.jpg">
+<div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm font-label-sm text-label-sm text-on-surface shadow-sm">
+              Case #1042
+            </div>
+<div class="absolute bottom-3 left-3 right-3 flex justify-between">
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-lowest/90 font-label-sm text-label-sm text-on-surface font-semibold shadow-sm">Before</span>
+<span class="px-2.5 py-1 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold shadow-sm">After (Veneers)</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Porcelain Veneers Reconstruction</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Full 8-unit upper arch aesthetic smile design resolving fluorosis discoloration and edge chipping.</p>
+<div class="mt-3 flex items-center gap-4 text-xs text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 2 Appointments</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span> Dr. Elena Vance</span>
+</div>
+</div>
+<div class="pt-3 border-t-0 flex items-center justify-between">
+<span class="text-xs text-secondary font-semibold">Verdict: 100% Patient Delight</span>
+<a class="font-label-md text-label-md text-primary hover:text-primary-container transition-all duration-300 hover:translate-x-1 inline-flex items-center gap-0.5" href="#quick-booking"><span>Explore Plan</span><span class="material-symbols-outlined text-sm">chevron_right</span></a>
+</div>
+</div>
+</div>
+<!-- Case 2 -->
+<div class="reveal-init rounded-2xl bg-surface-container-lowest overflow-hidden shadow-lg flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl group reveal-active">
+<div class="relative w-full h-64 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Macro dental close-up photograph showcasing anterior crowding and moderate bite misalignment before treatment, contrasted with perfectly aligned straight teeth following six months of clear aligner orthodontic therapy" src="./images/gallery-invisalign.jpg">
+<div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm font-label-sm text-label-sm text-on-surface shadow-sm">
+              Case #0893
+            </div>
+<div class="absolute bottom-3 left-3 right-3 flex justify-between">
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-lowest/90 font-label-sm text-label-sm text-on-surface font-semibold shadow-sm">Before</span>
+<span class="px-2.5 py-1 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm">After (Invisalign)</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">6-Month Clear Aligner Alignment</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Non-extraction correction of moderate upper canine crowding and lower incisor rotation.</p>
+<div class="mt-3 flex items-center gap-4 text-xs text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 6 Months</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span> Dr. Marcus Sterling</span>
+</div>
+</div>
+<div class="pt-3 border-t-0 flex items-center justify-between">
+<span class="text-xs text-secondary font-semibold">Verdict: Complete Occlusal Harmony</span>
+<a class="font-label-md text-label-md text-primary hover:text-primary-container transition-all duration-300 hover:translate-x-1 inline-flex items-center gap-0.5" href="#quick-booking"><span>Explore Plan</span><span class="material-symbols-outlined text-sm">chevron_right</span></a>
+</div>
+</div>
+</div>
+<!-- Case 3 -->
+<div class="reveal-init rounded-2xl bg-surface-container-lowest overflow-hidden shadow-lg flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl group reveal-active">
+<div class="relative w-full h-64 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="High resolution clinical dental photograph showing missing lateral incisor space on the left, next to the restored single tooth precision titanium and ceramic crown implant indistinguishable from natural neighboring teeth" src="./images/gallery-implant.jpg">
+<div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm font-label-sm text-label-sm text-on-surface shadow-sm">
+              Case #1210
+            </div>
+<div class="absolute bottom-3 left-3 right-3 flex justify-between">
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-lowest/90 font-label-sm text-label-sm text-on-surface font-semibold shadow-sm">Before</span>
+<span class="px-2.5 py-1 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold shadow-sm">After (Implant)</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Single Tooth Precision Implant</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Computerized 3D surgical guide restoration of fractured central incisor with layered ceramic crown.</p>
+<div class="mt-3 flex items-center gap-4 text-xs text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> Guided Day Procedure</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span> Dr. Elena Vance</span>
+</div>
+</div>
+<div class="pt-3 border-t-0 flex items-center justify-between">
+<span class="text-xs text-secondary font-semibold">Verdict: 100% Bone Integration</span>
+<a class="font-label-md text-label-md text-primary hover:text-primary-container transition-all duration-300 hover:translate-x-1 inline-flex items-center gap-0.5" href="#quick-booking"><span>Explore Plan</span><span class="material-symbols-outlined text-sm">chevron_right</span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: APPOINTMENT BOOKING PROCESS (3-Step Journey) -->
+<section class="w-full py-20 bg-surface">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop space-y-space-xl">
+<div class="text-center max-w-2xl mx-auto reveal-init reveal-active">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Seamless Care Continuum</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2 tracking-tight">Your 3-Step Journey to a Confident Smile</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">We respect your time. Our streamlined digital onboarding ensures zero waiting rooms and complete clinical clarity.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop relative">
+<!-- Step 1 -->
+<div class="reveal-init p-8 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col relative transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl group reveal-active">
+<div class="flex items-center justify-between mb-6">
+<span class="w-12 h-12 rounded-xl bg-primary-fixed text-primary font-bold font-title-lg flex items-center justify-center transition-transform duration-300 group-hover:scale-110">01</span>
+<span class="material-symbols-outlined text-primary text-2xl">devices</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Select Care &amp; Doctor</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Pick your desired treatment and favorite specialist online in under 60 seconds. Instant SMS appointment confirmation with valet directions.</p>
+<div class="mt-6 flex items-center gap-1.5 text-secondary text-xs font-semibold">
+<span class="material-symbols-outlined text-sm">bolt</span>
+<span>Zero paper forms needed</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="reveal-init p-8 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col relative transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl group reveal-active">
+<div class="flex items-center justify-between mb-6">
+<span class="w-12 h-12 rounded-xl bg-secondary-fixed text-secondary font-bold font-title-lg flex items-center justify-center transition-transform duration-300 group-hover:scale-110">02</span>
+<span class="material-symbols-outlined text-secondary text-2xl">view_in_ar</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Digital 3D Scan &amp; Consultation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Relax in our sensory suite while our radiation-free intraoral 3D scanner maps your entire dentition. Review results side-by-side with your doctor.</p>
+<div class="mt-6 flex items-center gap-1.5 text-secondary text-xs font-semibold">
+<span class="material-symbols-outlined text-sm">visibility</span>
+<span>Transparent fixed fee upfront</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="reveal-init p-8 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col relative transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl group reveal-active">
+<div class="flex items-center justify-between mb-6">
+<span class="w-12 h-12 rounded-xl bg-tertiary-fixed text-tertiary font-bold font-title-lg flex items-center justify-center transition-transform duration-300 group-hover:scale-110">03</span>
+<span class="material-symbols-outlined text-tertiary text-2xl">health_and_safety</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Gentle Care &amp; Lifetime Care</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Experience micro-invasive laser therapy, noise-cancelling headphones, and warm scented towelettes followed by our ongoing smile warranty.</p>
+<div class="mt-6 flex items-center gap-1.5 text-secondary text-xs font-semibold">
+<span class="material-symbols-outlined text-sm">favorite</span>
+<span>24/7 post-care clinician access</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8: FAQ ACCORDION (With Smooth Vanilla JS Transitions) -->
+<section class="w-full py-20 bg-surface-container-low" id="faq">
+<div class="max-w-4xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop space-y-space-lg">
+<div class="text-center reveal-init reveal-active">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Got Questions?</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2 tracking-tight">Frequently Asked Inquiries</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Clear, straightforward answers about our procedures, comfort protocols, and insurance coverage.</p>
+</div>
+<div class="space-y-4 pt-4"><div class="reveal-init faq-item rounded-2xl bg-surface-container-lowest shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md reveal-active"><button class="faq-toggle w-full min-h-[48px] p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer" id="faq-btn-1" aria-expanded="false" aria-controls="faq-answer-1" type="button"><span class="font-title-lg text-title-lg text-on-surface">Do you offer pain-free and sedation dentistry options?</span><span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300 ease-out">expand_more</span></button><div id="faq-answer-1" role="region" aria-labelledby="faq-btn-1" class="faq-content max-h-0 opacity-0 overflow-hidden transition-all duration-350 ease-in-out px-6"><div class="pb-6 text-on-surface-variant font-body-md text-body-md">Yes, absolutely. We pride ourselves on being a dental sanctuary. We provide conscious nitrous oxide, oral conscious sedation, and deep IV sedation overseen by licensed anesthesiologists. Furthermore, our computerized local anesthesia system (The Wand) delivers numbing fluid without any pinch sensation.</div></div></div><div class="reveal-init faq-item rounded-2xl bg-surface-container-lowest shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md reveal-active"><button class="faq-toggle w-full min-h-[48px] p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer" id="faq-btn-2" aria-expanded="false" aria-controls="faq-answer-2" type="button"><span class="font-title-lg text-title-lg text-on-surface">How much do dental implants or veneers typically cost, and are payment plans available?</span><span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300 ease-out">expand_more</span></button><div id="faq-answer-2" role="region" aria-labelledby="faq-btn-2" class="faq-content max-h-0 opacity-0 overflow-hidden transition-all duration-350 ease-in-out px-6"><div class="pb-6 text-on-surface-variant font-body-md text-body-md">Custom porcelain veneers generally start at $1,400 per tooth, while complete 3D-guided dental implants (including titanium post, custom abutment, and monolithic zirconia crown) start at $2,850. We provide 0% APR financing through CareCredit, Sunbit, and internal monthly installment plans up to 36 months.</div></div></div><div class="reveal-init faq-item rounded-2xl bg-surface-container-lowest shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md reveal-active"><button class="faq-toggle w-full min-h-[48px] p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer" id="faq-btn-3" aria-expanded="false" aria-controls="faq-answer-3" type="button"><span class="font-title-lg text-title-lg text-on-surface">What dental insurance plans do you accept?</span><span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300 ease-out">expand_more</span></button><div id="faq-answer-3" role="region" aria-labelledby="faq-btn-3" class="faq-content max-h-0 opacity-0 overflow-hidden transition-all duration-350 ease-in-out px-6"><div class="pb-6 text-on-surface-variant font-body-md text-body-md">We are in-network with most major PPO insurance providers, including Delta Dental, Cigna, Aetna, MetLife, Guardian, and Blue Cross Blue Shield. Our billing concierge team files all insurance claims directly on your behalf to maximize your annual benefits.</div></div></div><div class="reveal-init faq-item rounded-2xl bg-surface-container-lowest shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md reveal-active"><button class="faq-toggle w-full min-h-[48px] p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer" id="faq-btn-4" aria-expanded="false" aria-controls="faq-answer-4" type="button"><span class="font-title-lg text-title-lg text-on-surface">What should I do in a dental emergency after hours?</span><span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300 ease-out">expand_more</span></button><div id="faq-answer-4" role="region" aria-labelledby="faq-btn-4" class="faq-content max-h-0 opacity-0 overflow-hidden transition-all duration-350 ease-in-out px-6"><div class="pb-6 text-on-surface-variant font-body-md text-body-md">Call our emergency triage line immediately at +1 (800) 586-4621. An on-call dental surgeon is available 24/7. We maintain designated priority trauma slots every morning and evening to see severe dental emergencies within 60 minutes.</div></div></div><div class="reveal-init faq-item rounded-2xl bg-surface-container-lowest shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md reveal-active"><button class="faq-toggle w-full min-h-[48px] p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer" id="faq-btn-5" aria-expanded="false" aria-controls="faq-answer-5" type="button"><span class="font-title-lg text-title-lg text-on-surface">How often should I come for routine cleaning and checkups?</span><span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300 ease-out">expand_more</span></button><div id="faq-answer-5" role="region" aria-labelledby="faq-btn-5" class="faq-content max-h-0 opacity-0 overflow-hidden transition-all duration-350 ease-in-out px-6"><div class="pb-6 text-on-surface-variant font-body-md text-body-md">For individuals with healthy gums and minimal tartar buildup, an appointment every 6 months is recommended. For patients undergoing orthodontic treatment or with periodontal maintenance needs, our doctors may suggest a customized 3 to 4-month care cycle to protect gum health.</div></div></div></div>
+</div>
+</section>
+<!-- SECTION 9: CONTACT, LOCATION & HOURS + QUICK BOOKING WIDGET -->
+<section class="w-full py-20 bg-surface" id="contact">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<!-- Left: Clinic Details & Map Preview -->
+<div class="lg:col-span-5 space-y-space-md reveal-init reveal-active">
+<div>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Clinic Concierge</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2 tracking-tight">Visit Our Clinical Sanctuary</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Centrally situated inside Evergreen Medical Promenade with private heated subterranean valet parking for all patients.</p>
+</div>
+<div class="p-6 rounded-2xl bg-surface-container-low space-y-4 shadow-sm transition-all duration-300 hover:shadow-md">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">location_on</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Physical Address</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">742 Evergreen Medical Promenade, Suite 400<br>Boston, MA 02116</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-xl mt-0.5">schedule</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Operating Hours</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Mon – Fri: 7:30 AM – 7:00 PM</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Saturday: 8:30 AM – 3:30 PM</p>
+<p class="font-body-sm text-body-sm text-secondary font-medium">Sunday: Emergency On-Call Only</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl mt-0.5">contact_phone</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Direct Lines</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Main Office: +1 (800) 586-4621</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Concierge: care@luminadental.com</p>
+</div>
+</div>
+</div>
+<!-- Stylized Google Maps Static Representation -->
+<a aria-label="Open clinic location in Google Maps (opens in a new tab)" class="w-full h-56 rounded-2xl bg-cover bg-center overflow-hidden shadow-inner relative flex items-end p-4 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2" data-location="742 Evergreen Medical Promenade Boston MA" href="https://www.google.com/maps/search/?api=1&amp;query=120+Newbury+Street+Boston+MA+02116" id="clinic-map-card" rel="noopener noreferrer" style="background-image: url('./images/clinic-map.png')" target="_blank">
+<div class="p-3 rounded-xl bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-between w-full shadow-sm transition-all duration-300 group-hover:bg-surface-container-lowest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">directions</span>
+<span class="font-label-md text-label-md text-on-surface" data-config="map-parking-label">Complimentary Valet Station</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium" data-config="map-parking-detail">Gate B</span>
+</div>
+</a>
+</div>
+<!-- Right: Interactive Quick Booking Widget -->
+<div class="lg:col-span-7 p-8 rounded-3xl bg-surface-container-lowest shadow-[0_12px_40px_rgba(19,27,46,0.08)] reveal-init reveal-active" id="quick-booking">
+<div class="flex items-center justify-between pb-6 border-b-0">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Instant Appointment Request</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Select your preferred doctor, time, and service.</p>
+</div>
+<span class="p-2.5 rounded-xl bg-secondary-container text-secondary transition-transform duration-300 hover:scale-105">
+<span class="material-symbols-outlined text-xl">calendar_today</span>
+</span>
+</div>
+<form class="space-y-4 pt-2" id="appointment-form"><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div><label for="booking-treatment" class="block font-label-md text-label-md text-on-surface mb-1.5 font-semibold">Selected Treatment <span class="text-error" aria-hidden="true">*</span></label><select id="booking-treatment" name="treatment" aria-required="true" class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all duration-300 text-sm"><option value="cleaning">Teeth Cleaning &amp; Oral Checkup</option><option value="implants">Dental Implants Consultation</option><option value="invisalign">Invisalign 3D Smile Scan</option><option value="veneers">Cosmetic Veneers Makeover</option><option value="endodontics">Pain-Free Root Canal Relief</option><option value="emergency">Emergency Urgent Tooth Care</option></select></div><div><label for="booking-doctor" class="block font-label-md text-label-md text-on-surface mb-1.5 font-semibold">Specialist Doctor <span class="text-error" aria-hidden="true">*</span></label><select id="booking-doctor" name="doctor" aria-required="true" class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all duration-300 text-sm"><option value="any">First Available Specialist</option><option value="dr-vance">Dr. Elena Vance, DDS (Implants &amp; Cosmetic)</option><option value="dr-sterling">Dr. Marcus Sterling, DMD (Orthodontics)</option><option value="dr-chen">Dr. Sophia Chen, DDS (Pediatric &amp; Sedation)</option></select></div></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div><label for="booking-date" class="block font-label-md text-label-md text-on-surface mb-1.5 font-semibold">Preferred Date <span class="text-error" aria-hidden="true">*</span></label><input id="booking-date" name="date" aria-required="true" class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all duration-300 text-sm" type="date" value="2025-03-24"></div><div><label for="booking-time" class="block font-label-md text-label-md text-on-surface mb-1.5 font-semibold">Preferred Time Window <span class="text-error" aria-hidden="true">*</span></label><select id="booking-time" name="time_window" aria-required="true" class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all duration-300 text-sm"><option value="morning">Morning (8:00 AM – 11:30 AM)</option><option value="midday">Midday (11:30 AM – 2:30 PM)</option><option value="afternoon">Afternoon (2:30 PM – 5:30 PM)</option><option value="evening">Evening (5:30 PM – 7:00 PM)</option></select></div></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div><label for="booking-fullname" class="block font-label-md text-label-md text-on-surface mb-1.5 font-semibold">Patient Full Name <span class="text-error" aria-hidden="true">*</span></label><input id="booking-fullname" name="fullname" aria-required="true" aria-describedby="name-help" class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all duration-300 text-sm" placeholder="e.g. Eleanor Vance" required="" type="text"><p id="name-help" class="font-label-sm text-xs text-on-surface-variant mt-1">Enter your legal first and last name.</p></div><div><label for="booking-phone" class="block font-label-md text-label-md text-on-surface mb-1.5 font-semibold">Mobile Phone Number <span class="text-error" aria-hidden="true">*</span></label><input id="booking-phone" name="phone" aria-required="true" aria-describedby="phone-help" class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all duration-300 text-sm" placeholder="+1 (555) 000-0000" required="" type="tel"><p id="phone-help" class="font-label-sm text-xs text-on-surface-variant mt-1">We will send instant SMS appointment confirmation.</p></div></div><div><label for="booking-notes" class="block font-label-md text-label-md text-on-surface mb-1.5 font-semibold">Notes or Dental Anxiety Notes (Optional)</label><textarea id="booking-notes" name="notes" class="w-full p-4 rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all duration-300 text-sm" placeholder="Let us know if you experience dental anxiety, require sedation, or have specific concerns..." rows="2"></textarea></div><button class="w-full h-14 min-h-[48px] rounded-xl bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider transition-all duration-300 shadow-[0_6px_20px_rgba(0,101,145,0.3)] hover:bg-tertiary hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary-container flex items-center justify-center gap-2 cursor-pointer" id="submit-booking-btn" type="submit"><span class="material-symbols-outlined text-lg">event_available</span><span>Confirm &amp; Lock In My Booking</span></button><p class="text-center font-body-sm text-body-sm text-outline mt-3 flex items-center justify-center gap-1.5"><span class="material-symbols-outlined text-sm text-secondary">lock</span><span>HIPAA Compliant &amp; Encrypted. No credit card required to request visit.</span></p><div class="hidden p-4 rounded-xl bg-secondary-container text-on-secondary-container font-label-md text-label-md text-center transition-all duration-300" id="booking-success-message" role="status" aria-live="polite">Appointment request submitted successfully! A concierge care coordinator will confirm your exact slot via SMS within 15 minutes.</div></form>
+</div>
+</div>
+</div>
+</section>
+</div></main><section class="w-full bg-surface-container-high py-space-md"><div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm text-on-surface"><span class="material-symbols-outlined text-error animate-pulse">emergency</span><div><p class="font-label-md text-label-md text-on-surface">24/7 Dental Emergency Triage</p><p class="font-body-sm text-body-sm text-on-surface-variant">Severe pain, cracked tooth, or trauma? Immediate priority access available.</p></div></div><a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-error text-on-error font-label-md text-label-md hover:bg-error/90 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-sm" href="tel:18005864621"><span class="material-symbols-outlined text-sm">phone_in_talk</span><span>Call Emergency Care</span></a></div></section><footer class="w-full bg-surface-container-low pt-16 pb-28 lg:pb-16 text-on-surface-variant"><div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl"><div class="lg:col-span-2 space-y-space-md"><div class="flex items-center gap-space-sm"><img alt="LuminaDental Logo" class="h-8 w-auto object-contain"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Lumina<span class="text-primary-container font-extrabold">Dental</span></span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Redefining clinical dentistry with soothing modern sanctuary spaces, minimally invasive laser innovations, and precision cosmetic artistry designed for anxious smiles.</p><div class="space-y-1 font-body-sm text-body-sm"><p class="font-label-md text-label-md text-on-surface">Clinical Suite Hours</p><p>Monday – Friday: 7:30 AM – 7:00 PM</p><p>Saturday: 8:30 AM – 3:30 PM</p><p class="text-secondary font-label-md text-label-md">Sunday: Emergency Care Only</p></div></div><div class="space-y-space-sm"><h3 class="font-title-lg text-title-lg text-on-surface">Specialized Care</h3><ul class="space-y-2 font-body-sm text-body-sm"><li class="hover:text-primary transition-colors"><a data-path="services" href="#services">Porcelain Veneers</a></li><li class="hover:text-primary transition-colors"><a data-path="services" href="#services">Invisalign &amp; Clear Aligners</a></li><li class="hover:text-primary transition-colors"><a data-path="services" href="#services">Laser Periodontal Therapy</a></li><li class="hover:text-primary transition-colors"><a data-path="services" href="#services">Guided Dental Implants</a></li><li class="hover:text-primary transition-colors"><a data-path="services" href="#services">Sedation &amp; Anxious Patient Care</a></li></ul></div><div class="space-y-space-sm"><h3 class="font-title-lg text-title-lg text-on-surface">Patient Practice</h3><ul class="space-y-2 font-body-sm text-body-sm"><li class="hover:text-primary transition-colors"><a data-path="doctors" href="#doctors">Lead Practitioners</a></li><li class="hover:text-primary transition-colors"><a data-path="gallery" href="#gallery">Smile Transformation Gallery</a></li><li class="hover:text-primary transition-colors"><a data-path="faq" href="#faq">Insurance &amp; Flexible Plans</a></li><li class="hover:text-primary transition-colors"><a data-path="contact" href="#contact">Location &amp; Valet Access</a></li><li class="hover:text-primary transition-colors"><a data-path="contact" href="#contact">Digital Consultation Form</a></li></ul></div><div class="space-y-space-md"><h3 class="font-title-lg text-title-lg text-on-surface">Clinic Concierge</h3><div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-[0_4px_12px_rgba(15,23,42,0.04)] space-y-space-xs"><div class="flex items-start gap-2 text-on-surface font-body-sm text-body-sm"><span class="material-symbols-outlined text-primary text-base mt-0.5">pin_drop</span><span>742 Evergreen Medical Promenade, Suite 400</span></div><div class="flex items-center gap-2 text-secondary font-label-md text-label-md"><span class="material-symbols-outlined text-base">directions_car</span><span>Complimentary Heated Patient Valet</span></div></div><div class="space-y-2"><label class="font-label-md text-label-md text-on-surface block">Oral Health Briefing</label><div class="flex gap-1"><input class="w-full px-3 py-2 text-sm rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary-container transition-all" placeholder="Your email address" type="email"><button aria-label="Subscribe" class="px-3 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-surface-tint transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center cursor-pointer" type="button"><span class="material-symbols-outlined text-sm">arrow_forward</span></button></div></div></div></div><div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-outline"><p>© 2024 LuminaDental Oral Health Institute. All rights reserved.</p><div class="flex items-center gap-6 font-label-md text-label-md"><a class="hover:text-on-surface transition-colors" data-path="faq" href="#faq">Patient Privacy Notice</a><a class="hover:text-on-surface transition-colors" data-path="faq" href="#faq">HIPAA Safeguards</a><a class="hover:text-on-surface transition-colors" data-path="faq" href="#faq">Accessibility Accommodations</a></div></div></footer><div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_16px_rgba(15,23,42,0.08)] px-margin py-3"><div class="flex items-center gap-3"><a class="flex-1 flex items-center justify-center gap-2 h-12 rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md transition-all duration-300 active:scale-95" href="tel:18005864621"><span class="material-symbols-outlined text-base">call</span><span>Call Now</span></a><a class="flex-[1.5] flex items-center justify-center h-12 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider shadow-[0_4px_14px_rgba(14,165,233,0.35)] transition-all duration-300 active:scale-95" data-path="book-appointment" href="#quick-booking">Book Visit</a></div></div>
+<!-- ALL MODERN INTERACTIONS SCRIPT -->
+<script nonce="lumina-csp-2026">
+  (function() {
+    // 1. Navigation Frosted Glass & Border Effect on Scroll
+    const header = document.getElementById('main-header');
+    function handleHeaderScroll() {
+      if (!header) return;
+      if (window.scrollY > 40) {
+        header.classList.add('bg-white/90', 'shadow-sm', 'border-b', 'border-slate-200/80');
+        header.classList.remove('bg-surface/75');
+      } else {
+        header.classList.remove('bg-white/90', 'shadow-sm', 'border-b', 'border-slate-200/80');
+        header.classList.add('bg-surface/75');
+      }
+    }
+    window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+    handleHeaderScroll();
+
+    // 2. IntersectionObserver: Staggered Scroll Reveal for Sections and Cards
+    const reveals = document.querySelectorAll('.reveal-init');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            // Calculate delay if sibling in same parent container
+            const siblings = Array.from(el.parentElement.children).filter(c => c.classList.contains('reveal-init'));
+            const idx = siblings.indexOf(el);
+            const delay = idx > 0 ? (idx * 80) : 0;
+            
+            setTimeout(() => {
+              el.classList.add('reveal-active');
+            }, delay);
+
+            observer.unobserve(el);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      reveals.forEach(el => revealObserver.observe(el));
+    } else {
+      reveals.forEach(el => el.classList.add('reveal-active'));
+    }
+
+    // 3. Animated Statistics Counter on Scroll View
+    const statsContainer = document.getElementById('stats-container');
+    let countersAnimated = false;
+
+    function animateCounters() {
+      if (countersAnimated) return;
+      countersAnimated = true;
+
+      const counters = document.querySelectorAll('.stat-counter');
+      counters.forEach(counter => {
+        const target = parseFloat(counter.getAttribute('data-target'));
+        const format = counter.getAttribute('data-format');
+        const suffix = counter.getAttribute('data-suffix') || '';
+        const duration = 1200;
+        const startTime = performance.now();
+
+        function updateCounter(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          // Ease-out cubic
+          const easeOut = 1 - Math.pow(1 - progress, 3);
+          const currentVal = target * easeOut;
+
+          if (format === 'comma') {
+            counter.textContent = Math.floor(currentVal).toLocaleString() + suffix;
+          } else if (format === 'decimal') {
+            counter.textContent = currentVal.toFixed(1) + suffix;
+          } else {
+            counter.textContent = Math.floor(currentVal) + suffix;
+          }
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            if (format === 'comma') {
+              counter.textContent = target.toLocaleString() + suffix;
+            } else if (format === 'decimal') {
+              counter.textContent = target.toFixed(1) + suffix;
+            } else {
+              counter.textContent = target + suffix;
+            }
+          }
+        }
+        requestAnimationFrame(updateCounter);
+      });
+    }
+
+    if (statsContainer && 'IntersectionObserver' in window && !prefersReducedMotion) {
+      const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounters();
+            statsObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      statsObserver.observe(statsContainer);
+    } else if (statsContainer) {
+      animateCounters();
+    }
+
+    // 4. Smooth Accordion FAQ with Max-Height Transition
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const btn = item.querySelector('.faq-toggle');
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.faq-icon');
+
+      btn.addEventListener('click', () => {
+        const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+        // Close all other items smoothly
+        faqItems.forEach(other => {
+          const otherContent = other.querySelector('.faq-content');
+          const otherIcon = other.querySelector('.faq-icon');
+          otherContent.style.maxHeight = '0px';
+          otherContent.classList.remove('opacity-100');
+          otherContent.classList.add('opacity-0');
+          if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+        });
+
+        // If it wasn't open, open it
+        if (!isOpen) {
+          content.style.maxHeight = content.scrollHeight + 32 + 'px';
+          content.classList.remove('opacity-0');
+          content.classList.add('opacity-100');
+          if (icon) icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+
+    // 5. Testimonial Carousel Interaction & Auto/Manual Navigation
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    const testimonialGrid = document.getElementById('testimonials-grid');
+    const dots = document.querySelectorAll('.dot-indicator');
+    const prevBtn = document.getElementById('testimonial-prev');
+    const nextBtn = document.getElementById('testimonial-next');
+    let currentTestimonialIdx = 0;
+
+    function showTestimonial(index) {
+      if (testimonialCards.length === 0) return;
+      currentTestimonialIdx = (index + testimonialCards.length) % testimonialCards.length;
+
+      // Update dots styling
+      dots.forEach((dot, idx) => {
+        if (idx === currentTestimonialIdx) {
+          dot.className = 'w-8 h-2 rounded-full bg-primary transition-all duration-300 dot-indicator cursor-pointer';
+        } else {
+          dot.className = 'w-2 h-2 rounded-full bg-outline-variant hover:bg-primary/50 transition-all duration-300 dot-indicator cursor-pointer';
+        }
+      });
+
+      // Highlight active card on mobile/desktop smoothly
+      testimonialCards.forEach((card, idx) => {
+        if (idx === currentTestimonialIdx) {
+          card.classList.add('ring-2', 'ring-primary/20', 'bg-surface-container-lowest');
+        } else {
+          card.classList.remove('ring-2', 'ring-primary/20');
+        }
+      });
+
+      if (testimonialGrid && window.matchMedia('(max-width: 767px)').matches) {
+        const activeCard = testimonialCards[currentTestimonialIdx];
+        if (activeCard) {
+          testimonialGrid.scrollBy({
+            left: activeCard.offsetLeft - testimonialCards[0].offsetLeft - testimonialGrid.scrollLeft,
+            behavior: 'smooth'
+          });
+        }
+      }
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => {
+      showTestimonial(currentTestimonialIdx - 1);
+    });
+    if (nextBtn) nextBtn.addEventListener('click', () => {
+      showTestimonial(currentTestimonialIdx + 1);
+    });
+    dots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        const idx = parseInt(e.currentTarget.getAttribute('data-idx'));
+        showTestimonial(idx);
+      });
+    });
+
+    // Auto rotate testimonial every 7s if not reduced motion
+    if (!prefersReducedMotion) {
+      setInterval(() => {
+        showTestimonial(currentTestimonialIdx + 1);
+      }, 7000);
+    }
+
+    // 6. Quick Booking Form Submission Mock with Interactive State
+    const bookingForm = document.getElementById('appointment-form');
+    const successMsg = document.getElementById('booking-success-message');
+    const submitBtn = document.getElementById('submit-booking-btn');
+
+    if (bookingForm && successMsg && submitBtn) {
+      bookingForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        submitBtn.replaceChildren();
+        const progressIcon = document.createElement('span');
+        progressIcon.className = 'material-symbols-outlined animate-spin text-lg';
+        progressIcon.textContent = 'progress_activity';
+        const progressText = document.createElement('span');
+        progressText.textContent = 'Securing Slot...';
+        submitBtn.append(progressIcon, progressText);
+        
+        setTimeout(() => {
+          submitBtn.classList.add('hidden');
+          successMsg.classList.remove('hidden');
+          successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 700);
+      });
+    }
+
+    // 7. Mobile Drawer Handlers
+    const toggle = document.getElementById('mobile-nav-toggle');
+    const drawer = document.getElementById('mobile-nav-drawer');
+    const closeBtn = document.getElementById('mobile-nav-close');
+    const backdrop = document.getElementById('mobile-backdrop');
+    const drawerLinks = drawer ? drawer.querySelectorAll('a') : [];
+
+    function openMenu(){
+      if(!drawer)return;
+      drawer.classList.remove('pointer-events-none','opacity-0');
+      drawer.classList.add('opacity-100');
+      const panel=drawer.querySelector('aside');
+      if(panel){
+        panel.classList.remove('translate-x-full');
+        panel.classList.add('translate-x-0');
+      }
+    }
+    function closeMenu(){
+      if(!drawer)return;
+      drawer.classList.add('pointer-events-none','opacity-0');
+      drawer.classList.remove('opacity-100');
+      const panel=drawer.querySelector('aside');
+      if(panel){
+        panel.classList.remove('translate-x-0');
+        panel.classList.add('translate-x-full');
+      }
+    }
+    if(toggle) toggle.addEventListener('click', openMenu);
+    if(closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if(backdrop) backdrop.addEventListener('click', closeMenu);
+    drawerLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+    const navLinks = Array.from(document.querySelectorAll('nav a[href^="#"]'));
+    const ACTIVE_NAV_CLASSES = {
+      desktop: ['bg-surface-container-high', 'text-primary', 'font-bold'],
+      mobile: ['bg-surface-container', 'text-primary', 'font-bold']
+    };
+    const INACTIVE_NAV_CLASSES = {
+      desktop: [
+        'text-on-surface-variant',
+        'font-label-md',
+        'text-label-md',
+        'hover:text-on-surface',
+        'hover:bg-surface-container/60'
+      ],
+      mobile: [
+        'font-title-lg',
+        'text-title-lg',
+        'text-on-surface-variant',
+        'hover:bg-surface-container',
+        'hover:text-on-surface'
+      ]
+    };
+    const sections = ['home', 'about', 'services', 'doctors', 'testimonials', 'gallery', 'faq', 'contact']
+      .map(id => document.getElementById(id))
+      .filter(Boolean);
+    let pendingTargetHash = null;
+    let pendingTargetTimer;
+    let scrollUpdateScheduled = false;
+
+    function setActiveNavLink(targetHash) {
+      const activeHash = navLinks.some(link => link.getAttribute('href') === targetHash)
+        ? targetHash
+        : (navLinks[0] && navLinks[0].getAttribute('href')) || '#home';
+
+      navLinks.forEach(link => {
+        const type = link.closest('#mobile-nav-drawer') ? 'mobile' : 'desktop';
+        const isActive = link.getAttribute('href') === activeHash;
+        if ((link.getAttribute('aria-current') === 'page') === isActive) return;
+        link.classList.remove(...ACTIVE_NAV_CLASSES[type], ...INACTIVE_NAV_CLASSES[type]);
+        link.classList.add(...(isActive ? ACTIVE_NAV_CLASSES[type] : INACTIVE_NAV_CLASSES[type]));
+        if (isActive) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+      });
+    }
+
+    function holdNavTarget(targetHash) {
+      pendingTargetHash = targetHash;
+      window.clearTimeout(pendingTargetTimer);
+      pendingTargetTimer = window.setTimeout(() => {
+        pendingTargetHash = null;
+        updateActiveFromScroll();
+      }, 1800);
+    }
+
+    function updateActiveFromScroll() {
+      if (!sections.length) return;
+
+      if (pendingTargetHash) {
+        const targetSection = document.querySelector(pendingTargetHash);
+        const headerHeight = document.getElementById('main-header')?.offsetHeight || 0;
+        const targetBounds = targetSection && targetSection.getBoundingClientRect();
+        if (targetBounds && targetBounds.top <= headerHeight + 40 && targetBounds.bottom > headerHeight) {
+          const targetHash = pendingTargetHash;
+          pendingTargetHash = null;
+          window.clearTimeout(pendingTargetTimer);
+          setActiveNavLink(targetHash);
+          return;
+        }
+        return;
+      }
+
+      const atPageBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      if (atPageBottom) {
+        setActiveNavLink('#contact');
+        return;
+      }
+
+      const headerHeight = document.getElementById('main-header')?.offsetHeight || 0;
+      const activationLine = headerHeight + 40;
+      let activeSection = sections[0];
+      sections.forEach(section => {
+        if (section.getBoundingClientRect().top <= activationLine) activeSection = section;
+      });
+      setActiveNavLink(`#${activeSection.id}`);
+    }
+
+    function scheduleScrollUpdate() {
+      if (scrollUpdateScheduled) return;
+      scrollUpdateScheduled = true;
+      window.requestAnimationFrame(() => {
+        scrollUpdateScheduled = false;
+        updateActiveFromScroll();
+      });
+    }
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const targetHash = link.getAttribute('href');
+        setActiveNavLink(targetHash);
+        holdNavTarget(targetHash);
+      });
+    });
+
+    function handleHashChange() {
+      const targetHash = window.location.hash || '#home';
+      setActiveNavLink(targetHash);
+      holdNavTarget(targetHash);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const initialHash = window.location.hash || '#home';
+      setActiveNavLink(initialHash);
+      if (window.location.hash) holdNavTarget(initialHash);
+      scheduleScrollUpdate();
+    }, { once: true });
+    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener('scroll', scheduleScrollUpdate, { passive: true });
+    window.addEventListener('resize', scheduleScrollUpdate);
+    setActiveNavLink(window.location.hash || '#home');
+  })();
+</script>
+
+<script nonce="lumina-csp-2026" src="config.js"></script>
+<script nonce="lumina-csp-2026">
+  const CLINIC_CONFIG = window.CLINIC_CONFIG;
+  if (!CLINIC_CONFIG) throw new Error('config.js must define window.CLINIC_CONFIG before code.html initializes.');
+  (() => {
+    const params = new URLSearchParams(window.location.search);
+    const clientKey = params.get('client')?.toLowerCase().trim();
+    const presets = window.CLINIC_PRESETS;
+    if (clientKey && presets && Object.prototype.hasOwnProperty.call(presets, clientKey)) {
+      const mergeConfig = (target, source) => {
+        Object.keys(source).forEach(key => {
+          const value = source[key];
+          if (value && typeof value === 'object' && !Array.isArray(value)) {
+            const existing = target[key];
+            target[key] = mergeConfig(
+              existing && typeof existing === 'object' && !Array.isArray(existing) ? existing : {},
+              value
+            );
+          } else {
+            target[key] = value;
+          }
+        });
+        return target;
+      };
+      mergeConfig(CLINIC_CONFIG, presets[clientKey]);
+    }
+
+    const readQueryOverride = (key, maxLength) => {
+      const value = params.get(key);
+      return value === null ? '' : value.replace(/[\u0000-\u001F\u007F]/g, '').trim().slice(0, maxLength);
+    };
+
+    const sanitizeText = (value, maxLength = 300) =>
+      String(value ?? '').replace(/[\u0000-\u001F\u007F]/g, '').trim().slice(0, maxLength);
+
+    const isSafeImageUrl = value => {
+      const safe = sanitizeText(value, 1000);
+      if (!safe) return false;
+      if (/^\.\/images\/[^ \t\r\n]+$/i.test(safe)) return true;
+      try {
+        return new URL(safe, window.location.href).protocol === 'https:';
+      } catch {
+        return false;
+      }
+    };
+
+    const isSafeExternalUrl = value => {
+      const safe = sanitizeText(value, 1000);
+      if (!safe) return false;
+      if (/^\.\/[^ \t\r\n]+$/i.test(safe)) return true;
+      try {
+        const url = new URL(safe, window.location.href);
+        return ['https:', 'tel:', 'sms:', 'mailto:'].includes(url.protocol);
+      } catch {
+        return false;
+      }
+    };
+
+    const sanitizeConfigStrings = (object, depth = 0) => {
+      if (!object || typeof object !== 'object' || depth > 4) return;
+      Object.keys(object).forEach(key => {
+        const value = object[key];
+        if (typeof value === 'string') object[key] = sanitizeText(value, key === 'address' ? 300 : 500);
+        else if (value && typeof value === 'object') sanitizeConfigStrings(value, depth + 1);
+      });
+    };
+    sanitizeConfigStrings(CLINIC_CONFIG);
+
+    const nameOverride = readQueryOverride('name', 80);
+    if (nameOverride) CLINIC_CONFIG.clinicName = nameOverride;
+
+    const cityOverride = readQueryOverride('city', 100);
+    if (cityOverride) CLINIC_CONFIG.locationTagline = `Painless Sanctuary Dentistry • ${cityOverride}`;
+
+    const phoneOverride = readQueryOverride('phone', 40);
+    if (phoneOverride) {
+      let phoneDigits = phoneOverride.replace(/\D/g, '');
+      if (phoneDigits.length === 11 && phoneDigits.startsWith('1')) phoneDigits = phoneDigits.slice(1);
+      if (/^[2-9]\d{2}[2-9]\d{6}$/.test(phoneDigits)) {
+        CLINIC_CONFIG.displayPhone = `+1 (${phoneDigits.slice(0, 3)}) ${phoneDigits.slice(3, 6)}-${phoneDigits.slice(6)}`;
+        CLINIC_CONFIG.smsAndCallNumber = `+1${phoneDigits}`;
+      }
+    }
+
+    const doctorOverride = readQueryOverride('doctor', 100);
+    if (doctorOverride && CLINIC_CONFIG.leadDoctor) CLINIC_CONFIG.leadDoctor.name = doctorOverride;
+
+    const addressOverride = readQueryOverride('address', 300);
+    if (addressOverride) {
+      CLINIC_CONFIG.address = addressOverride;
+      if (CLINIC_CONFIG.map) CLINIC_CONFIG.map.googleMapsUrl = '';
+    }
+
+    const colorOverride = readQueryOverride('color', 9);
+    const hasColorOverride = /^#?(?:[0-9a-f]{3}|[0-9a-f]{6})$/i.test(colorOverride);
+    if (hasColorOverride) {
+      CLINIC_CONFIG.primaryColor = colorOverride.startsWith('#') ? colorOverride : `#${colorOverride}`;
+    }
+
+    const CLINIC_SMS_NUMBER = CLINIC_CONFIG.smsAndCallNumber;
+    const estimator = document.getElementById('cost-estimator');
+    if (!estimator) return;
+
+    function applyClinicConfig() {
+      if (hasColorOverride && CSS.supports('color', CLINIC_CONFIG.primaryColor)) {
+        document.documentElement.style.setProperty('--clinic-primary', CLINIC_CONFIG.primaryColor);
+        document.documentElement.style.setProperty('--clinic-primary-hover', CLINIC_CONFIG.primaryColor);
+        const primaryColor = CLINIC_CONFIG.primaryColor;
+        document.querySelectorAll('.text-primary, .text-primary-container').forEach(element =>
+          element.style.setProperty('color', primaryColor, 'important')
+        );
+        document.querySelectorAll('.bg-primary, .bg-primary-container').forEach(element =>
+          element.style.setProperty('background-color', primaryColor, 'important')
+        );
+        document.querySelectorAll('.border-primary').forEach(element =>
+          element.style.setProperty('border-color', primaryColor, 'important')
+        );
+        document.querySelectorAll('.ring-primary, [class~="focus:ring-primary"]').forEach(element =>
+          element.style.setProperty('--tw-ring-color', primaryColor, 'important')
+        );
+        document.querySelectorAll('[class~="hover:bg-primary"], [class~="hover:bg-tertiary"]').forEach(element => {
+          element.addEventListener('mouseenter', () =>
+            element.style.setProperty('background-color', primaryColor, 'important')
+          );
+          element.addEventListener('mouseleave', () =>
+            element.style.setProperty('background-color', primaryColor, 'important')
+          );
+        });
+      }
+
+      document.querySelectorAll('a[target="_blank"], [target="_blank"]').forEach(link => {
+        link.rel = 'noopener noreferrer';
+      });
+
+      let titleElement = document.querySelector('title');
+      if (!titleElement) {
+        titleElement = document.createElement('title');
+        document.head.appendChild(titleElement);
+      }
+      const titleSuffix = nameOverride ? 'Modern Dentistry' : 'Modern Dental Care';
+      titleElement.textContent = `${CLINIC_CONFIG.clinicName} | ${titleSuffix}`;
+      const brandImages = document.querySelectorAll('img[alt="LuminaDental Logo"]');
+      brandImages.forEach(image => {
+        const brand = image.parentElement;
+        if (!brand) return;
+        const brandText = brand.querySelector('a, span');
+        if (brandText) brandText.textContent = CLINIC_CONFIG.clinicName;
+        if (CLINIC_CONFIG.logoUrl && isSafeImageUrl(CLINIC_CONFIG.logoUrl)) {
+          image.src = CLINIC_CONFIG.logoUrl;
+          image.alt = `${CLINIC_CONFIG.clinicName} logo`;
+          return;
+        }
+        const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        icon.setAttribute('viewBox', '0 0 32 32');
+        icon.setAttribute('class', 'h-8 w-8 shrink-0');
+        icon.setAttribute('aria-hidden', 'true');
+        icon.classList.add('text-primary');
+        const toothPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        toothPath.setAttribute('d', 'M10 3.5c-4 0-7 2.9-7 7 0 6.3 3.4 8.6 4.2 14 .3 2 1.2 4 2.8 4 1.4 0 2-3 4-3s2.6 3 4 3c1.6 0 2.5-2 2.8-4C21.6 19.1 25 16.8 25 10.5c0-4.1-3-7-7-7-1.7 0-3 .7-4 1.7-1-1-2.3-1.7-4-1.7Z');
+        toothPath.setAttribute('fill', 'none');
+        toothPath.setAttribute('stroke', 'currentColor');
+        toothPath.setAttribute('stroke-linejoin', 'round');
+        toothPath.setAttribute('stroke-width', '1.8');
+        const smilePath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        smilePath.setAttribute('d', 'M9.5 13.5c1.5 1.2 3 1.8 4.5 1.8s3-.6 4.5-1.8');
+        smilePath.setAttribute('fill', 'none');
+        smilePath.setAttribute('stroke', 'currentColor');
+        smilePath.setAttribute('stroke-linecap', 'round');
+        smilePath.setAttribute('stroke-width', '1.6');
+        icon.append(toothPath, smilePath);
+        image.replaceWith(icon);
+      });
+
+      const textWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+      let textNode;
+      while ((textNode = textWalker.nextNode())) {
+        if (textNode.parentElement.closest('script, style')) continue;
+        textNode.nodeValue = textNode.nodeValue
+          .replace(/LuminaDental/g, CLINIC_CONFIG.clinicName)
+          .replace(/Dr\. Elena Vance(?:, DDS)?/g, CLINIC_CONFIG.leadDoctor.name)
+          .replace(/Dr\. Vance/g, CLINIC_CONFIG.leadDoctor.name.replace(/,\s*[^,]+$/, ''))
+          .replace(/Chief Implantologist & Cosmetic Dentist/g, CLINIC_CONFIG.leadDoctor.title)
+          .replace(/\+?1\s*\(800\)\s*586-4621/g, CLINIC_CONFIG.displayPhone)
+          .replace(/care@luminadental\.com/g, CLINIC_CONFIG.frontDeskEmail)
+          .replace(/742 Evergreen Medical Promenade, Suite 400/g, CLINIC_CONFIG.address);
+      }
+
+      document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+        const phoneDigits = String(CLINIC_CONFIG.smsAndCallNumber).replace(/\D/g, '');
+        if (/^1?[2-9]\d{9}$/.test(phoneDigits)) link.href = `tel:+${phoneDigits.startsWith('1') ? phoneDigits : `1${phoneDigits}`}`;
+      });
+      document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+        const email = String(CLINIC_CONFIG.frontDeskEmail).trim();
+        if (/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) link.href = `mailto:${email}`;
+      });
+      document.querySelectorAll('[data-location]').forEach(location => {
+        location.dataset.location = CLINIC_CONFIG.address;
+      });
+      const mapCard = document.getElementById('clinic-map-card');
+      if (mapCard) {
+        const mapConfig = CLINIC_CONFIG.map;
+        const mapsUrl = mapConfig.googleMapsUrl.trim() ||
+          `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CLINIC_CONFIG.address)}`;
+        mapCard.href = isSafeExternalUrl(mapsUrl) ? mapsUrl : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CLINIC_CONFIG.address)}`;
+        mapCard.target = '_blank';
+        mapCard.rel = 'noopener noreferrer';
+        mapCard.setAttribute('aria-label', `Open ${CLINIC_CONFIG.address} in Google Maps (opens in a new tab)`);
+        if (mapConfig.imageUrl.trim() && isSafeImageUrl(mapConfig.imageUrl)) {
+          mapCard.style.backgroundImage = `url("${mapConfig.imageUrl}")`;
+        }
+        const parkingLabel = mapCard.querySelector('[data-config="map-parking-label"]');
+        const parkingDetail = mapCard.querySelector('[data-config="map-parking-detail"]');
+        if (parkingLabel) parkingLabel.textContent = mapConfig.parkingBadgeLabel;
+        if (parkingDetail) parkingDetail.textContent = mapConfig.parkingBadgeDetail;
+      }
+      const locationDescription = Array.from(document.querySelectorAll('#contact p'))
+        .find(item => item.textContent.includes('Evergreen Medical Promenade'));
+      if (locationDescription) {
+        locationDescription.textContent = `Conveniently located at ${CLINIC_CONFIG.address}. Contact our concierge for appointment and parking information.`;
+      }
+      const contactAddress = Array.from(document.querySelectorAll('#contact p'))
+        .find(item => item.textContent.includes(CLINIC_CONFIG.address));
+      if (contactAddress) contactAddress.textContent = CLINIC_CONFIG.address;
+      const contactHours = Array.from(document.querySelectorAll('#contact p'))
+        .find(item => item.textContent.includes('Mon – Fri:'));
+      if (contactHours) {
+        contactHours.textContent = CLINIC_CONFIG.hours;
+        Array.from(contactHours.parentElement.querySelectorAll('p')).forEach(item => {
+          if (item !== contactHours && !item.textContent.includes('Operating Hours')) item.remove();
+        });
+      }
+
+      const emergencyBanner = document.getElementById('emergency-banner');
+      if (emergencyBanner) {
+        const separatorIndex = CLINIC_CONFIG.emergencyBannerText.indexOf(':');
+        const title = separatorIndex === -1
+            ? CLINIC_CONFIG.emergencyBannerText
+            : CLINIC_CONFIG.emergencyBannerText.slice(0, separatorIndex + 1);
+        const message = separatorIndex === -1
+            ? ''
+            : CLINIC_CONFIG.emergencyBannerText.slice(separatorIndex + 1).trim();
+        const titleElement = emergencyBanner.querySelector('[data-config="emergency-title"]') ||
+          emergencyBanner.querySelector('strong');
+        const messageElement = emergencyBanner.querySelector('[data-config="emergency-message"]') ||
+          emergencyBanner.querySelector('.flex.items-center.gap-2 > span:last-child');
+        const mobileLabel = emergencyBanner.querySelector('[data-config="emergency-mobile-label"]');
+        if (titleElement) titleElement.textContent = title;
+        if (messageElement) messageElement.textContent = message;
+        if (mobileLabel) mobileLabel.textContent = title.replace(/:\s*$/, '');
+
+        const emergencyPhone = emergencyBanner.querySelector('[data-config="emergency-phone"]') ||
+          emergencyBanner.querySelector('a[href^="tel:"]');
+        if (emergencyPhone) {
+          const emergencyDigits = String(CLINIC_CONFIG.smsAndCallNumber).replace(/\D/g, '').replace(/^1/, '');
+          if (/^[2-9]\d{9}$/.test(emergencyDigits)) emergencyPhone.href = `tel:+1${emergencyDigits}`;
+          const phoneLabel = emergencyPhone.querySelector('[data-config="phone-display"]') ||
+            emergencyPhone.querySelector('span:last-child');
+          if (phoneLabel) phoneLabel.textContent = `Call ${CLINIC_CONFIG.displayPhone}`;
+        }
+      }
+
+      const locationTag = document.querySelector('#home .animate-hero-fade-1 span:last-child');
+      if (locationTag) locationTag.textContent = CLINIC_CONFIG.locationTagline;
+      const heroImage = document.querySelector('#home .animate-hero-card .relative.w-full.max-w-md img');
+      if (heroImage && isSafeImageUrl(CLINIC_CONFIG.heroImageUrl)) {
+        heroImage.src = CLINIC_CONFIG.heroImageUrl;
+        heroImage.alt = `${CLINIC_CONFIG.leadDoctor.name} - Lead Practitioner at ${CLINIC_CONFIG.clinicName}`;
+      }
+      const heroInfo = document.querySelector('#home .animate-hero-card .relative.w-full.max-w-md div.absolute.bottom-4');
+      if (heroInfo) {
+        const fields = heroInfo.querySelectorAll('p');
+        if (fields[0]) fields[0].textContent = CLINIC_CONFIG.leadDoctor.name;
+        if (fields[1]) fields[1].textContent = CLINIC_CONFIG.leadDoctor.title;
+      }
+      const badge = Array.from(document.querySelectorAll('#home .animate-hero-card > div.absolute'))
+        .find(item => item.textContent.includes('Pain-Free Tech'));
+      if (badge) {
+        const badgeParts = CLINIC_CONFIG.leadDoctor.badgeText.split('•').map(part => part.trim());
+        const fields = badge.querySelectorAll('p');
+        if (fields[0]) fields[0].textContent = badgeParts[0] || '';
+        if (fields[1]) fields[1].textContent = badgeParts.slice(1).join(' • ');
+      }
+      const leadDoctorCard = document.querySelector('#doctors .grid.grid-cols-1');
+      if (leadDoctorCard && leadDoctorCard.firstElementChild) {
+        const card = leadDoctorCard.firstElementChild;
+        const name = card.querySelector('h3');
+        const title = card.querySelector('p.font-body-sm');
+        const photo = card.querySelector('img');
+        if (name) name.textContent = CLINIC_CONFIG.leadDoctor.name;
+        if (title) title.textContent = CLINIC_CONFIG.leadDoctor.title;
+        if (photo && isSafeImageUrl(CLINIC_CONFIG.heroImageUrl)) {
+          photo.src = CLINIC_CONFIG.heroImageUrl;
+          photo.alt = `${CLINIC_CONFIG.leadDoctor.name} - ${CLINIC_CONFIG.leadDoctor.title}`;
+        }
+      }
+
+      const trustBar = document.querySelector('#home .animate-hero-fade-5');
+      if (trustBar) {
+        const trustText = Array.from(trustBar.querySelectorAll('span'));
+        const rating = trustText.find(item => item.textContent.includes('Rating'));
+        const certification = trustText.find(item => item.textContent.includes('ADA Certified'));
+        const award = trustText.find(item => item.textContent.includes('Top Dental Practice'));
+        if (rating) rating.textContent = `${CLINIC_CONFIG.trustStats.rating} Rating (${CLINIC_CONFIG.trustStats.reviewCount})`;
+        if (certification) certification.textContent = CLINIC_CONFIG.trustStats.certification;
+        if (award) award.textContent = CLINIC_CONFIG.trustStats.award;
+      }
+
+      const footerHours = Array.from(document.querySelectorAll('footer p'))
+        .find(item => item.textContent.includes('Monday – Friday'));
+      if (footerHours) {
+        footerHours.textContent = CLINIC_CONFIG.hours;
+        Array.from(footerHours.parentElement.querySelectorAll('p')).forEach(item => {
+          if (item !== footerHours && !item.textContent.includes('Clinical Suite Hours')) item.remove();
+        });
+      }
+
+      const insuranceCarrier = document.querySelector('#cost-estimator input[placeholder^="Insurance Carrier"]');
+      if (insuranceCarrier) insuranceCarrier.placeholder = `Insurance Carrier (${CLINIC_CONFIG.acceptedInsurancePlaceholder})`;
+
+      if (CLINIC_CONFIG.bookingUrl) {
+        document.querySelectorAll('a[href="#quick-booking"]').forEach(link => {
+          if (link.closest('#cost-estimator')) return;
+          if (isSafeExternalUrl(CLINIC_CONFIG.bookingUrl)) {
+            link.href = CLINIC_CONFIG.bookingUrl;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+          }
+        });
+      }
+    }
+
+    applyClinicConfig();
+
+    function createSmsBanner() {
+      const banner = document.createElement('div');
+      banner.className = 'hidden sms-confirmation-banner';
+      banner.setAttribute('role', 'status');
+      banner.setAttribute('aria-live', 'polite');
+
+      const message = document.createElement('p');
+      const controls = document.createElement('div');
+      controls.className = 'sms-confirmation-actions';
+      const callLink = document.createElement('a');
+      const callDigits = String(CLINIC_CONFIG.smsAndCallNumber).replace(/\D/g, '').replace(/^1/, '');
+      callLink.href = /^[2-9]\d{9}$/.test(callDigits) ? `tel:+1${callDigits}` : 'tel:+18005864621';
+      callLink.textContent = 'Call us directly';
+      const copyButton = document.createElement('button');
+      copyButton.type = 'button';
+      copyButton.className = 'sms-copy-button';
+      copyButton.textContent = 'Copy Message';
+      copyButton.setAttribute('aria-label', 'Copy SMS message');
+      const copyFeedback = document.createElement('span');
+      copyFeedback.className = 'sms-copy-feedback';
+      copyFeedback.setAttribute('aria-live', 'polite');
+      controls.append(callLink, copyButton);
+      banner.append(message, controls, copyFeedback);
+      copyButton.addEventListener('click', async () => {
+        let copied = false;
+        if (navigator.clipboard && window.isSecureContext) {
+          try {
+            await navigator.clipboard.writeText(banner.dataset.smsMessage || '');
+            copied = true;
+          } catch (error) {
+            copyFeedback.textContent = 'Clipboard access was unavailable; trying a browser fallback.';
+          }
+        }
+        if (!copied) {
+          const temporaryInput = document.createElement('textarea');
+          temporaryInput.value = banner.dataset.smsMessage || '';
+          temporaryInput.setAttribute('readonly', '');
+          temporaryInput.style.position = 'fixed';
+          temporaryInput.style.opacity = '0';
+          document.body.appendChild(temporaryInput);
+          temporaryInput.select();
+          copied = document.execCommand('copy');
+          temporaryInput.remove();
+        }
+        copyFeedback.textContent = copied
+          ? 'Message copied to clipboard.'
+          : 'Unable to copy automatically. Please select and copy the message from the SMS link.';
+      });
+      return { banner, message };
+    }
+
+    function showSmsBanner(banner, messageElement, message, smsBody, isError) {
+      banner.dataset.smsMessage = smsBody || '';
+      messageElement.textContent = message;
+      banner.classList.toggle('sms-confirmation-error', Boolean(isError));
+      banner.setAttribute('role', isError ? 'alert' : 'status');
+      banner.classList.remove('hidden');
+    }
+
+    function openSmsMessage(message) {
+      const digits = String(CLINIC_SMS_NUMBER).replace(/\D/g, '');
+      if (!/^1?[2-9]\d{9}$/.test(digits)) return;
+      const safeNumber = digits.startsWith('1') ? `+${digits}` : `+1${digits}`;
+      window.location.href = `sms:${safeNumber}?&body=${encodeURIComponent(sanitizeText(message, 1000).replace(/[\r\n]+/g, '\n'))}`;
+    }
+
+    const phoneValidationMessage = 'Please enter a valid 10-digit US phone number (e.g., (555) 234-5678).';
+    const contactValidationMessage = 'Please enter a valid email address or 10-digit US phone number.';
+
+    function isValidUSPhone(value) {
+      let digits = value.replace(/\D/g, '');
+      if (digits.length === 11 && digits.startsWith('1')) digits = digits.slice(1);
+      return /^[2-9]\d{2}[2-9]\d{6}$/.test(digits);
+    }
+
+    function isValidEmail(value) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    }
+
+    function formatUSPhone(value) {
+      let digits = value.replace(/\D/g, '');
+      if (digits.length === 11 && digits.startsWith('1')) digits = digits.slice(1);
+      digits = digits.slice(0, 10);
+      if (!digits) return '';
+      if (digits.length <= 3) return `(${digits}`;
+      if (digits.length <= 6) return `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+      return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+    }
+
+    function createPhoneFeedback(input, id) {
+      const error = document.createElement('p');
+      error.id = id;
+      error.className = 'hidden mt-1 text-xs text-red-600';
+      error.setAttribute('role', 'alert');
+      error.setAttribute('aria-live', 'polite');
+      input.insertAdjacentElement('afterend', error);
+      const descriptions = (input.getAttribute('aria-describedby') || '').split(/\s+/).filter(Boolean);
+      input.setAttribute('aria-describedby', [...new Set([...descriptions, id])].join(' '));
+      return {
+        error,
+        show(message) {
+          input.classList.add('border-red-500');
+          input.setAttribute('aria-invalid', 'true');
+          error.textContent = message;
+          error.classList.remove('hidden');
+        },
+        clear() {
+          input.classList.remove('border-red-500');
+          input.removeAttribute('aria-invalid');
+          error.textContent = '';
+          error.classList.add('hidden');
+        }
+      };
+    }
+
+    function bindPhoneFormatting(input, allowEmail, feedback) {
+      const update = () => {
+        const value = input.value;
+        if (allowEmail && /[a-z@]/i.test(value)) {
+          if (isValidEmail(value.trim())) feedback.clear();
+          return;
+        }
+
+        const caret = input.selectionStart === null ? value.length : input.selectionStart;
+        const digitsBeforeCaret = value.slice(0, caret).replace(/\D/g, '').length;
+        const formatted = formatUSPhone(value);
+        if (formatted !== value) {
+          input.value = formatted;
+          const digitCount = Math.min(digitsBeforeCaret, formatted.replace(/\D/g, '').length);
+          let nextCaret = 0;
+          let seenDigits = 0;
+          while (nextCaret < formatted.length && seenDigits < digitCount) {
+            if (/\d/.test(formatted[nextCaret])) seenDigits += 1;
+            nextCaret += 1;
+          }
+          input.setSelectionRange(nextCaret, nextCaret);
+        }
+        if (isValidUSPhone(input.value)) feedback.clear();
+      };
+
+      input.addEventListener('input', update);
+      input.addEventListener('paste', event => {
+        const pasted = event.clipboardData && event.clipboardData.getData('text');
+        if (!pasted || (allowEmail && /[a-z@]/i.test(pasted))) return;
+        event.preventDefault();
+        const start = input.selectionStart === null ? input.value.length : input.selectionStart;
+        const end = input.selectionEnd === null ? start : input.selectionEnd;
+        input.value = formatUSPhone(input.value.slice(0, start) + pasted + input.value.slice(end));
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+      });
+    }
+
+    window.CLINIC_PHONE_UTILS = Object.freeze({
+      isValidUSPhone,
+      formatUSPhone,
+      bindPhoneFormatting,
+      createPhoneFeedback
+    });
+
+    const cards = estimator.querySelectorAll(':scope > div > div.grid > div');
+    const calculatorCard = cards[0];
+    const insuranceCard = cards[1];
+    if (!calculatorCard || !insuranceCard) return;
+    calculatorCard.id = 'instant-treatment-calculator';
+    insuranceCard.id = 'quick-insurance-check';
+
+    const procedureSelect = calculatorCard.querySelector('select');
+    const unitsInput = calculatorCard.querySelector('input[type="number"]');
+    const selects = calculatorCard.querySelectorAll('select');
+    const coverageSelect = selects[1];
+    const resultLabel = Array.from(calculatorCard.querySelectorAll('p')).find(item =>
+      item.textContent.trim().toLowerCase() === 'estimated patient responsibility'
+    );
+    const resultPrice = resultLabel && resultLabel.nextElementSibling;
+    const monthlyText = resultPrice && resultPrice.nextElementSibling;
+    const lockButton = calculatorCard.querySelector('a[href="#quick-booking"]');
+
+    if (!procedureSelect || !unitsInput || !coverageSelect || !resultPrice || !monthlyText || !lockButton) return;
+
+    const procedures = Object.entries(CLINIC_CONFIG.procedures).map(([key, procedure]) => ({
+      key,
+      ...procedure
+    }));
+    const coverages = [
+      { name: 'No Insurance / Self-Pay', rate: 0 },
+      { name: 'Basic PPO (Approx. 50% coverage)', rate: 0.5 },
+      { name: 'Premier PPO (Approx. 80% coverage)', rate: 0.8 },
+      { name: 'Preventive Plan (100% covered)', rate: 1 }
+    ];
+    const usd = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+    const procedureLabel = procedureSelect.previousElementSibling;
+    const coverageLabel = coverageSelect.previousElementSibling;
+    const unitsLabel = unitsInput.previousElementSibling;
+    if (procedureLabel) procedureLabel.textContent = 'Select Planned Procedure';
+    if (coverageLabel) coverageLabel.textContent = 'Coverage Level';
+    if (unitsLabel) unitsLabel.textContent = 'Number of Teeth / Units';
+
+    procedureSelect.id = 'planned-procedure';
+    coverageSelect.id = 'coverage-level';
+    unitsInput.id = 'treatment-units';
+    if (procedureLabel) procedureLabel.htmlFor = procedureSelect.id;
+    if (coverageLabel) coverageLabel.htmlFor = coverageSelect.id;
+    if (unitsLabel) unitsLabel.htmlFor = unitsInput.id;
+    procedureSelect.replaceChildren();
+    procedures.forEach(procedure => {
+      const option = document.createElement('option');
+      option.value = sanitizeText(procedure.key, 40);
+      option.textContent = sanitizeText(procedure.label, 200);
+      procedureSelect.appendChild(option);
+    });
+    coverageSelect.replaceChildren();
+    coverages.forEach((coverage, index) => {
+      const option = document.createElement('option');
+      option.value = String(index);
+      option.textContent = sanitizeText(coverage.name, 100);
+      coverageSelect.appendChild(option);
+    });
+    unitsInput.min = '1';
+    unitsInput.max = '32';
+    unitsInput.step = '1';
+
+    let currentEstimate;
+    const booking = document.getElementById('quick-booking');
+    const bookingForm = document.getElementById('appointment-form');
+    const bookingPhoneInput = document.getElementById('booking-phone');
+    const bookingNotes = document.getElementById('booking-notes');
+    const bookingTreatment = document.getElementById('booking-treatment');
+    const bookingPhoneFeedback = bookingPhoneInput
+      ? createPhoneFeedback(bookingPhoneInput, 'booking-phone-error')
+      : null;
+    if (bookingPhoneInput) {
+      bookingPhoneInput.inputMode = 'numeric';
+      bookingPhoneInput.maxLength = 14;
+      bookingPhoneInput.placeholder = '(555) 234-5678';
+      bindPhoneFormatting(bookingPhoneInput, false, bookingPhoneFeedback);
+    }
+    const estimateSummary = document.createElement('div');
+    estimateSummary.id = 'locked-estimate-summary';
+    estimateSummary.className = 'hidden locked-estimate-summary';
+    estimateSummary.setAttribute('role', 'status');
+    estimateSummary.setAttribute('aria-live', 'polite');
+    if (booking && bookingForm) booking.insertBefore(estimateSummary, bookingForm);
+    const bookingSmsBanner = createSmsBanner();
+    const bookingSubmitButton = document.getElementById('submit-booking-btn');
+    if (bookingSubmitButton) bookingSubmitButton.insertAdjacentElement('afterend', bookingSmsBanner.banner);
+
+    function updateEstimate() {
+      const procedure = procedures.find(item => item.key === procedureSelect.value);
+      const coverage = coverages[Number(coverageSelect.value)];
+      if (!procedure || !coverage) return;
+
+      if (!procedure.perUnit) {
+        unitsInput.value = '1';
+        unitsInput.disabled = true;
+      } else {
+        unitsInput.disabled = false;
+        if (unitsInput.value !== '' && Number(unitsInput.value) > 32) {
+          unitsInput.value = '32';
+        }
+      }
+
+      const units = Number(unitsInput.value);
+      if (!Number.isInteger(units) || units < 1 || units > 32) {
+        unitsInput.setCustomValidity('Enter a whole number between 1 and 32.');
+        return;
+      }
+      unitsInput.setCustomValidity('');
+
+      const minResponsibility = Math.round(procedure.min * units * (1 - coverage.rate));
+      const maxResponsibility = Math.round(procedure.max * units * (1 - coverage.rate));
+      resultPrice.textContent = minResponsibility === 0 && maxResponsibility === 0
+        ? '$0'
+        : `${usd.format(minResponsibility)} – ${usd.format(maxResponsibility)}`;
+      monthlyText.textContent = minResponsibility === 0
+        ? 'Fully covered under preventive benefits'
+        : `Or as low as $${Math.max(1, Math.round(minResponsibility / 12))}/mo with CareCredit 0% APR`;
+      currentEstimate = {
+        key: procedure.key,
+        procedure: procedure.label,
+        coverage: coverage.name,
+        units,
+        range: resultPrice.textContent
+      };
+    }
+
+    [procedureSelect, coverageSelect, unitsInput].forEach(input => {
+      input.addEventListener('input', updateEstimate);
+      input.addEventListener('change', updateEstimate);
+    });
+    updateEstimate();
+
+    lockButton.addEventListener('click', event => {
+      event.preventDefault();
+      updateEstimate();
+      if (!unitsInput.checkValidity() || !currentEstimate) {
+        unitsInput.reportValidity();
+        return;
+      }
+      window.lockedDentalEstimate = { ...currentEstimate };
+      estimateSummary.textContent = [
+        'Locked-in estimate',
+        `Procedure: ${currentEstimate.procedure}`,
+        `Coverage: ${currentEstimate.coverage}`,
+        `Number of Teeth / Units: ${currentEstimate.units}`,
+        `Estimated Patient Responsibility: ${currentEstimate.range}`
+      ].join('\n');
+      estimateSummary.classList.remove('hidden');
+      if (bookingNotes) {
+        if (bookingNotes.dataset.originalNotes === undefined) {
+          bookingNotes.dataset.originalNotes = bookingNotes.value;
+        }
+        const estimateDetails = [
+          'Treatment estimate:',
+          `Procedure: ${currentEstimate.procedure}`,
+          `Coverage: ${currentEstimate.coverage}`,
+          `Units: ${currentEstimate.units}`,
+          `Estimated patient responsibility: ${currentEstimate.range}`
+        ].join('\n');
+        bookingNotes.value = [bookingNotes.dataset.originalNotes.trim(), estimateDetails].filter(Boolean).join('\n\n');
+      }
+      if (bookingTreatment) {
+        const matchingOption = Array.from(bookingTreatment.options).find(option =>
+          currentEstimate.key === 'cleaning' && option.value === 'cleaning' ||
+          currentEstimate.key === 'rootCanal' && option.value === 'endodontics' ||
+          currentEstimate.key === 'implant' && option.value === 'implants'
+        );
+        if (matchingOption) bookingTreatment.value = matchingOption.value;
+      }
+      if (booking) {
+        booking.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+        if (bookingNotes) window.setTimeout(() => bookingNotes.focus({ preventScroll: true }), 350);
+      }
+    });
+
+    if (bookingForm) {
+      bookingForm.addEventListener('submit', event => {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        const patientPhone = bookingPhoneInput ? bookingPhoneInput.value.trim() : '';
+        if (!bookingPhoneInput || !bookingPhoneFeedback || !isValidUSPhone(patientPhone)) {
+          if (bookingPhoneFeedback) bookingPhoneFeedback.show(phoneValidationMessage);
+          if (bookingPhoneInput) bookingPhoneInput.focus();
+          return;
+        }
+        bookingPhoneFeedback.clear();
+
+        const estimate = window.lockedDentalEstimate || currentEstimate;
+        const patientName = sanitizeText(document.getElementById('booking-fullname')?.value || '', 100);
+        const preferredTime = sanitizeText(document.getElementById('booking-time')?.selectedOptions[0]?.textContent || '', 100);
+        const bookingMessage = [
+          `Hi ${CLINIC_CONFIG.clinicName}! I'd like to lock in my estimate and book an appointment.`,
+          `• Procedure: ${estimate ? estimate.procedure : 'Not specified'}`,
+          `• Units/Teeth: ${estimate ? estimate.units : 'Not specified'}`,
+          `• Coverage: ${estimate ? estimate.coverage : 'Not selected'}`,
+          `• Est. Out-of-Pocket: ${estimate ? estimate.range : 'Not calculated'}`,
+          `• Name/Contact: ${[patientName, patientPhone].filter(Boolean).join(' / ') || 'Not provided'}`,
+          preferredTime ? `• Preferred Time: ${preferredTime}` : ''
+        ].filter(Boolean).join('\n');
+        showSmsBanner(
+          bookingSmsBanner.banner,
+          bookingSmsBanner.message,
+          `Opening your Messages app to text our concierge at ${CLINIC_CONFIG.displayPhone}. On a desktop? Call us directly or copy your request below.`,
+          bookingMessage,
+          false
+        );
+        openSmsMessage(bookingMessage);
+      }, true);
+    }
+
+    const verificationForm = insuranceCard.querySelector('form');
+    if (!verificationForm) return;
+    const verificationInputs = verificationForm.querySelectorAll('input');
+    const carrierInput = verificationInputs[0];
+    const contactInput = verificationInputs[1];
+    const policyholderInput = verificationInputs[2];
+    const verifyButton = verificationForm.querySelector('button');
+    const badgeText = verificationForm.querySelector('p:last-child span:last-child');
+    if (!carrierInput || !contactInput || !verifyButton) return;
+
+    carrierInput.setAttribute('aria-label', 'Insurance Carrier');
+    contactInput.type = 'text';
+    contactInput.placeholder = 'Phone Number or Email';
+    contactInput.setAttribute('aria-label', 'Phone Number or Email');
+    contactInput.setAttribute('autocomplete', 'off');
+    contactInput.required = true;
+    contactInput.name = 'verification-contact';
+    const insurancePhoneFeedback = createPhoneFeedback(contactInput, 'insurance-contact-error');
+    bindPhoneFormatting(contactInput, true, insurancePhoneFeedback);
+    if (policyholderInput) policyholderInput.remove();
+    verifyButton.type = 'submit';
+    verificationForm.noValidate = true;
+    if (badgeText) badgeText.textContent = 'Secure benefit verification request';
+
+    const verificationSmsBanner = createSmsBanner();
+    verifyButton.insertAdjacentElement('afterend', verificationSmsBanner.banner);
+
+    carrierInput.addEventListener('input', () => {
+      if (carrierInput.value.trim()) carrierInput.removeAttribute('aria-invalid');
+    });
+    contactInput.addEventListener('input', () => contactInput.setCustomValidity(''));
+    verificationForm.addEventListener('submit', event => {
+      event.preventDefault();
+      const carrier = sanitizeText(carrierInput.value, 100);
+      const contact = sanitizeText(contactInput.value, 254);
+      const carrierMissing = !carrier;
+      const contactMissing = !contact;
+      const emailValid = isValidEmail(contact);
+      const phoneValid = isValidUSPhone(contact);
+      const contactInvalid = !emailValid && !phoneValid;
+      const contactError = !contact || /[a-z@]/i.test(contact)
+        ? contactValidationMessage
+        : phoneValidationMessage;
+      if (contactInvalid) insurancePhoneFeedback.show(contactError);
+      else insurancePhoneFeedback.clear();
+      contactInput.setCustomValidity(contactInvalid ? contactError : '');
+      carrierInput.toggleAttribute('aria-invalid', carrierMissing);
+      contactInput.toggleAttribute('aria-invalid', contactMissing || contactInvalid);
+      if (carrierMissing || contactMissing || contactInvalid) {
+        const firstInvalid = carrierMissing ? carrierInput : contactInput;
+        showSmsBanner(
+          verificationSmsBanner.banner,
+          verificationSmsBanner.message,
+          carrierMissing || contactMissing
+            ? 'Enter both your insurance carrier and a valid phone number or email address.'
+            : 'Enter a valid phone number or email address.',
+          '',
+          true
+        );
+        firstInvalid.focus();
+        if (!contactMissing && contactInvalid) contactInput.reportValidity();
+        return;
+      }
+
+      const insuranceMessage = [
+        `Hi ${CLINIC_CONFIG.clinicName}! Please verify my dental insurance benefits.`,
+        `• Insurance Carrier: ${carrier}`,
+        `• Best Contact: ${contact}`
+      ].join('\n');
+      showSmsBanner(
+        verificationSmsBanner.banner,
+        verificationSmsBanner.message,
+        `Opening your Messages app to text our concierge at ${CLINIC_CONFIG.displayPhone}. On a desktop? Call us directly or copy your request below.`,
+        insuranceMessage,
+        false
+      );
+      openSmsMessage(insuranceMessage);
+    });
+  })();
+</script>
+
+<style>
+  #cost-estimator input[aria-invalid="true"] {
+    border-color: #ba1a1a !important;
+    box-shadow: 0 0 0 2px rgba(186, 26, 26, .15);
+  }
+  #appointment-form input.border-red-500,
+  #cost-estimator input.border-red-500 {
+    border-color: #ef4444 !important;
+    transition: none !important;
+  }
+  .sms-confirmation-banner {
+    margin-top: .75rem;
+    padding: 1rem;
+    border-radius: .75rem;
+    background: #d7f5ef;
+    color: #00504a;
+    font-size: .875rem;
+    line-height: 1.5;
+  }
+  .sms-confirmation-banner p { margin: 0; }
+  .sms-confirmation-error { background: #ffdad6; color: #93000a; }
+  .sms-confirmation-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .75rem;
+    margin-top: .75rem;
+  }
+  .sms-confirmation-actions a {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+  .sms-copy-button {
+    min-height: 40px;
+    padding: .5rem .85rem;
+    border: 0;
+    border-radius: .6rem;
+    background: #006a63;
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .sms-copy-button:focus-visible {
+    outline: 3px solid #006591;
+    outline-offset: 3px;
+  }
+  .sms-copy-feedback { display: block; margin-top: .35rem; }
+  .locked-estimate-summary {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: .75rem;
+    background: #f2f3ff;
+    color: #131b2e;
+    font-size: .9rem;
+    line-height: 1.6;
+    white-space: pre-line;
+  }
+  #emergency-banner {
+    position: relative !important;
+    top: auto !important;
+    z-index: auto !important;
+  }
+  #main-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 50;
+  }
+  #main-content {
+    padding-top: 0 !important;
+  }
+  #main-header > div {
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  #main-header > div > div:first-child {
+    flex: 0 0 auto;
+    margin-right: 1.5rem;
+    white-space: nowrap;
+  }
+  #main-header > div > div:first-child > img {
+    width: 2rem;
+    height: 2rem;
+    flex: 0 0 2rem;
+    overflow: hidden;
+    font-size: 0;
+  }
+  #main-header > div > nav {
+    flex: 1 1 auto;
+    min-width: 0;
+    justify-content: center;
+    gap: .25rem;
+  }
+  #main-header > div > nav > a {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    white-space: nowrap;
+  }
+  #main-header > div > div:nth-of-type(2) {
+    flex: 0 0 auto;
+    gap: .5rem;
+  }
+  #main-header > div > div:nth-of-type(2) > a {
+    white-space: nowrap;
+  }
+  #hero-pain-free-badge {
+    top: 1rem;
+    right: auto;
+    bottom: auto;
+    left: 1rem;
+    max-width: calc(100% - 1rem);
+  }
+  @media (min-width: 1280px) and (max-width: 1440px) {
+    #main-header > div > div:nth-of-type(2) > a:first-child,
+    #main-header > div > div:nth-of-type(2) > div {
+      display: none;
+    }
+    #main-header > div > div:nth-of-type(2) > a {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  #concierge-chat-window {
+    position: fixed;
+    right: 1rem;
+    bottom: 9rem;
+    width: min(340px, calc(100vw - 2rem));
+    max-height: min(500px, calc(100vh - 2rem));
+  }
+  @media (min-width: 640px) {
+    #concierge-chat-window {
+      width: min(380px, calc(100vw - 2rem));
+      right: 1.5rem;
+      bottom: 6rem;
+    }
+  }
+  #concierge-chat-messages {
+    overscroll-behavior: contain;
+  }
+  #live-chat-widget input.border-red-500 {
+    border-color: #ef4444 !important;
+    transition: none !important;
+  }
+  :root {
+    --clinic-primary: #132c46;
+    --clinic-primary-hover: #0b1d30;
+    --clinic-accent: #1f9d97;
+  }
+  #main-content h1,
+  #main-content h2 {
+    color: #0f172a !important;
+  }
+  #concierge-chat-window > header {
+    background-color: var(--clinic-primary) !important;
+  }
+  #concierge-chat-window button:focus-visible,
+  #concierge-chat-window a:focus-visible,
+  #live-chat-widget [role="button"]:focus-visible {
+    outline: 2px solid var(--clinic-primary);
+    outline-offset: 2px;
+  }
+</style>
+<script nonce="lumina-csp-2026">
+  (() => {
+    const sanitizeTextInput = (value, maxLength) =>
+      String(value ?? '').replace(/[\u0000-\u001F\u007F]/g, '').trim().slice(0, maxLength);
+
+    document.querySelectorAll('#appointment-form, #cost-estimator form, form').forEach(form => {
+      if (form.querySelector('input[name="botcheck"]')) return;
+      const honeypot = document.createElement('input');
+      honeypot.type = 'text';
+      honeypot.name = 'botcheck';
+      honeypot.tabIndex = -1;
+      honeypot.autocomplete = 'off';
+      honeypot.setAttribute('aria-hidden', 'true');
+      honeypot.style.cssText = 'position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;opacity:0!important;';
+      form.appendChild(honeypot);
+
+      const disclaimer = document.createElement('p');
+      disclaimer.className = 'rounded-lg bg-surface-container-low px-3 py-2 text-xs text-on-surface-variant';
+      disclaimer.setAttribute('role', 'note');
+      disclaimer.textContent = 'Please do not submit confidential medical details or health records through this form.';
+      form.insertBefore(disclaimer, form.firstChild);
+
+      form.addEventListener('submit', event => {
+        const botcheck = form.querySelector('[name="botcheck"]');
+        if (botcheck && sanitizeTextInput(botcheck.value, 100)) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          return;
+        }
+        const now = Date.now();
+        const lastSubmit = Number(form.dataset.lastSubmit || 0);
+        if (now - lastSubmit < 30000) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          const cooldown = form.querySelector('[data-submit-cooldown]');
+          if (cooldown) cooldown.textContent = 'Please wait 30 seconds before submitting again.';
+          return;
+        }
+        form.dataset.lastSubmit = String(now);
+        form.querySelectorAll('input, textarea').forEach(field => {
+          if (typeof field.value === 'string') field.value = sanitizeTextInput(field.value, field.type === 'email' ? 254 : 300);
+        });
+      }, true);
+    });
+
+    const bookingNotes = document.getElementById('booking-notes');
+    if (bookingNotes) bookingNotes.closest('div')?.remove();
+
+    document.querySelectorAll('#appointment-form p, #cost-estimator p').forEach(item => {
+      if (/HIPAA Compliant|Encrypted and HIPAA secure submission/i.test(item.textContent)) {
+        item.textContent = 'Please do not submit confidential medical details or health records through this form.';
+      }
+    });
+
+    const header = document.getElementById('main-header');
+    const emergencyBanner = document.getElementById('emergency-banner');
+    if (header && emergencyBanner && emergencyBanner.parentElement !== header) {
+      header.insertBefore(emergencyBanner, header.firstChild);
+    }
+
+    const briefingEmailField = document.querySelector('footer input[placeholder="Your email address"]');
+    const briefingLabel = Array.from(document.querySelectorAll('footer label'))
+      .find(label => label.textContent.trim() === 'Oral Health Briefing');
+    if (briefingLabel && briefingLabel.parentElement) {
+      briefingLabel.parentElement.remove();
+    } else if (briefingEmailField && briefingEmailField.parentElement) {
+      briefingEmailField.parentElement.remove();
+    }
+
+    if (emergencyBanner) {
+      const announcement = emergencyBanner.querySelector('.max-w-7xl');
+      const messageGroup = emergencyBanner.querySelector('.flex.items-center.gap-2');
+      const dot = messageGroup && messageGroup.querySelector('span:first-child');
+      const title = messageGroup && messageGroup.querySelector('strong');
+      const message = messageGroup && messageGroup.querySelector('span:last-child');
+      const phoneGroup = announcement && announcement.lastElementChild;
+      const phoneLink = phoneGroup && phoneGroup.querySelector('a');
+      const phoneIcon = phoneLink && phoneLink.querySelector('.material-symbols-outlined');
+      const phoneLabel = phoneLink && phoneLink.querySelector('span:last-child');
+
+      emergencyBanner.classList.remove('px-4');
+      emergencyBanner.classList.add('px-3', 'sm:px-4');
+      if (announcement) {
+        announcement.classList.remove('flex-wrap', 'gap-3', 'text-xs');
+        announcement.classList.add('flex-row', 'gap-2', 'sm:gap-3', 'text-[10px]');
+      }
+      if (messageGroup) {
+        messageGroup.classList.remove('gap-2');
+        messageGroup.classList.add('min-w-0', 'gap-1.5', 'sm:gap-2');
+      }
+      if (dot) {
+        dot.classList.remove('w-2.5', 'h-2.5');
+        dot.classList.add('shrink-0', 'w-2', 'h-2', 'rounded-full');
+      }
+      if (title) {
+        title.dataset.config = 'emergency-title';
+        title.classList.add('hidden', 'sm:inline');
+        const mobileLabel = document.createElement('strong');
+        mobileLabel.className = 'sm:hidden tracking-wider font-bold whitespace-nowrap';
+        mobileLabel.dataset.config = 'emergency-mobile-label';
+        mobileLabel.textContent = title.textContent.replace(/:\s*$/, '');
+        messageGroup.insertBefore(mobileLabel, title);
+      }
+      if (message) {
+        message.dataset.config = 'emergency-message';
+        message.classList.add('hidden', 'sm:inline');
+      }
+      if (phoneGroup) phoneGroup.classList.add('shrink-0');
+      if (phoneLink) {
+        phoneLink.dataset.config = 'emergency-phone';
+        phoneLink.classList.remove('px-3');
+        phoneLink.classList.add('shrink-0', 'whitespace-nowrap', 'px-2.5');
+      }
+      if (phoneIcon) phoneIcon.classList.add('hidden', 'sm:inline');
+      if (phoneLabel) phoneLabel.dataset.config = 'phone-display';
+    }
+
+    const heroBadges = document.querySelectorAll('#home .animate-hero-card > div.absolute');
+    const nextSlotBadge = Array.from(heroBadges).find(badge => badge.textContent.includes('Next Available Slot'));
+    const painFreeBadge = Array.from(heroBadges).find(badge => badge.textContent.includes('Pain-Free Tech'));
+    if (nextSlotBadge) nextSlotBadge.remove();
+    if (painFreeBadge) painFreeBadge.id = 'hero-pain-free-badge';
+  })();
+</script>
+
+<script nonce="lumina-csp-2026">
+  (() => {
+    function initializeConcierge() {
+      const config = window.CLINIC_CONFIG;
+      const widget = document.getElementById('live-chat-widget');
+      const toggleButton = document.getElementById('chat-toggle-button');
+      if (!config || !widget || !toggleButton) return;
+
+      const settings = config.concierge || {};
+      if (settings.enabled === false) {
+        widget.hidden = true;
+        return;
+      }
+
+      const phoneUtils = window.CLINIC_PHONE_UTILS;
+      if (!phoneUtils) throw new Error('Phone utilities must initialize before the concierge widget.');
+
+      const clinicName = config.clinicName || 'Dental Clinic';
+      const phoneNumber = config.smsAndCallNumber;
+      const displayPhone = config.displayPhone || phoneNumber;
+      const primaryColorOverride = document.documentElement.style.getPropertyValue('--clinic-primary').trim();
+      const pill = widget.querySelector(':scope > div');
+      const pillText = pill && pill.querySelector('span:last-child');
+
+      toggleButton.setAttribute('aria-controls', 'concierge-chat-window');
+      toggleButton.setAttribute('aria-expanded', 'false');
+      toggleButton.setAttribute('aria-label', `Open ${clinicName} Concierge`);
+      if (primaryColorOverride) {
+        toggleButton.style.setProperty('background-color', primaryColorOverride, 'important');
+      }
+      if (pill) {
+        pill.setAttribute('role', 'button');
+        pill.setAttribute('tabindex', '0');
+        pill.setAttribute('aria-label', `Open ${clinicName} Concierge`);
+        pill.setAttribute('aria-haspopup', 'dialog');
+        pill.setAttribute('aria-controls', 'concierge-chat-window');
+        pill.setAttribute('aria-expanded', 'false');
+        pill.classList.add('cursor-pointer', 'select-none');
+      }
+      if (pillText) pillText.textContent = `${clinicName} Concierge`;
+
+      const chatWindow = document.createElement('section');
+      chatWindow.id = 'concierge-chat-window';
+      chatWindow.className = 'concierge-chat-card hidden z-50 flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl w-[340px] sm:w-[380px] max-h-[500px] bottom-36 right-4 sm:bottom-24 sm:right-6';
+      chatWindow.setAttribute('role', 'dialog');
+      chatWindow.setAttribute('aria-modal', 'false');
+      chatWindow.setAttribute('aria-hidden', 'true');
+      chatWindow.setAttribute('aria-label', `${clinicName} Concierge chat`);
+
+      const header = document.createElement('header');
+      header.className = 'flex shrink-0 items-center justify-between gap-3 bg-primary px-4 py-3 text-white';
+      if (primaryColorOverride) {
+        header.style.setProperty('background-color', primaryColorOverride, 'important');
+      }
+
+      const headingGroup = document.createElement('div');
+      headingGroup.className = 'min-w-0';
+      const heading = document.createElement('h2');
+      heading.className = 'text-sm font-bold leading-snug';
+      heading.textContent = `${clinicName} Concierge`;
+      const status = document.createElement('p');
+      status.className = 'mt-1 flex items-center gap-1.5 text-xs text-white/90';
+      const statusDot = document.createElement('span');
+      statusDot.className = 'h-2 w-2 shrink-0 rounded-full bg-emerald-300';
+      statusDot.setAttribute('aria-hidden', 'true');
+      const responseTime = document.createElement('span');
+      responseTime.textContent = settings.responseTimeText || 'Typically replies instantly';
+      status.append(statusDot, responseTime);
+      headingGroup.append(heading, status);
+
+      const headerActions = document.createElement('div');
+      headerActions.className = 'flex shrink-0 items-center gap-1';
+      const resetButton = document.createElement('button');
+      resetButton.type = 'button';
+      resetButton.className = 'rounded-lg px-2 py-1 text-xs font-semibold hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white';
+      resetButton.textContent = 'Reset';
+      resetButton.setAttribute('aria-label', 'Reset concierge conversation');
+      const closeButton = document.createElement('button');
+      closeButton.type = 'button';
+      closeButton.className = 'flex h-8 w-8 items-center justify-center rounded-lg text-lg hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white';
+      closeButton.textContent = 'X';
+      closeButton.setAttribute('aria-label', 'Close concierge chat');
+      headerActions.append(resetButton, closeButton);
+      header.append(headingGroup, headerActions);
+
+      const messages = document.createElement('div');
+      messages.id = 'concierge-chat-messages';
+      messages.className = 'flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto p-4 text-sm';
+      messages.setAttribute('role', 'log');
+      messages.setAttribute('aria-live', 'polite');
+      messages.setAttribute('aria-relevant', 'additions');
+      chatWindow.append(header, messages);
+      widget.insertBefore(chatWindow, toggleButton);
+
+      function scrollMessages() {
+        messages.scrollTop = messages.scrollHeight;
+      }
+
+      function addMessage(text, sender) {
+        const row = document.createElement('div');
+        row.className = sender === 'user' ? 'flex justify-end' : 'flex justify-start';
+        const bubble = document.createElement('p');
+        bubble.className = sender === 'user'
+          ? 'max-w-[90%] whitespace-pre-line rounded-2xl rounded-br-md bg-primary px-3 py-2 text-sm text-white'
+          : 'max-w-[90%] whitespace-pre-line rounded-2xl rounded-bl-md bg-slate-100 px-3 py-2 text-sm text-slate-800';
+        if (sender === 'user' && primaryColorOverride) {
+          bubble.style.setProperty('background-color', primaryColorOverride, 'important');
+        }
+        bubble.textContent = text;
+        row.appendChild(bubble);
+        messages.appendChild(row);
+        scrollMessages();
+        return row;
+      }
+
+      function styleAction(element, primary) {
+        const colorClasses = primary
+          ? 'border-primary bg-primary text-on-primary'
+          : 'border-primary bg-white text-primary';
+        element.className = `inline-flex min-h-10 items-center justify-center rounded-full border px-3 py-2 text-left text-xs font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${colorClasses}`;
+        if (primaryColorOverride) {
+          element.style.setProperty('border-color', primaryColorOverride, 'important');
+          element.style.setProperty('color', primary ? '#ffffff' : primaryColorOverride, 'important');
+          if (primary) element.style.setProperty('background-color', primaryColorOverride, 'important');
+        }
+      }
+
+      function appendActions(actions) {
+        const row = document.createElement('div');
+        row.className = 'flex flex-wrap gap-2';
+        actions.forEach(action => {
+          let control;
+          if (action.href) {
+            control = document.createElement('a');
+            control.href = action.href;
+            if (action.href.startsWith('sms:') || action.href.startsWith('tel:')) {
+              control.addEventListener('click', () => closeChat(true), { once: true });
+            }
+          } else {
+            control = document.createElement('button');
+            control.type = 'button';
+            control.addEventListener('click', action.onClick);
+          }
+          control.textContent = action.label;
+          styleAction(control, Boolean(action.primary));
+          row.appendChild(control);
+        });
+        messages.appendChild(row);
+        scrollMessages();
+        return row;
+      }
+
+      function appendMainMenuAction() {
+        appendActions([{
+          label: 'Back to options',
+          onClick: showMainMenu
+        }]);
+      }
+
+      function showMainMenu() {
+        addMessage('What can we help with next?', 'bot');
+        renderQuickReplies();
+      }
+
+      function scrollToSection(id) {
+        const target = document.getElementById(id);
+        closeChat(true);
+        if (target) {
+          target.scrollIntoView({
+            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+            block: 'center'
+          });
+        }
+      }
+
+      function beginBookingFlow() {
+        const nextSlot = config.leadDoctor && config.leadDoctor.nextAvailableSlot
+          ? config.leadDoctor.nextAvailableSlot
+          : 'our next available appointment';
+        addMessage(`We'd love to get you scheduled! Our next available slot is ${nextSlot}. Enter your details below to lock it in via SMS:`, 'bot');
+
+        const form = document.createElement('form');
+        form.className = 'space-y-3 rounded-xl border border-slate-200 bg-slate-50 p-3';
+        form.noValidate = true;
+        const disclaimer = document.createElement('p');
+        disclaimer.className = 'rounded-lg bg-white px-3 py-2 text-xs text-slate-600';
+        disclaimer.setAttribute('role', 'note');
+        disclaimer.textContent = 'Please do not submit confidential medical details or health records through this form.';
+        const honeypot = document.createElement('input');
+        honeypot.type = 'text';
+        honeypot.name = 'botcheck';
+        honeypot.tabIndex = -1;
+        honeypot.autocomplete = 'off';
+        honeypot.setAttribute('aria-hidden', 'true');
+        honeypot.style.cssText = 'position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;opacity:0!important;';
+        form.append(disclaimer, honeypot);
+
+        const nameLabel = document.createElement('label');
+        nameLabel.className = 'block text-xs font-semibold text-slate-700';
+        nameLabel.textContent = 'Full Name';
+        const nameInput = document.createElement('input');
+        nameInput.type = 'text';
+        nameInput.name = 'concierge-name';
+        nameInput.autocomplete = 'name';
+        nameInput.required = true;
+        nameInput.placeholder = 'Your full name';
+        nameInput.className = 'mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-200';
+        nameLabel.appendChild(nameInput);
+        const nameError = document.createElement('p');
+        nameError.className = 'hidden mt-1 text-xs text-red-600';
+        nameError.setAttribute('role', 'alert');
+        nameError.id = 'concierge-name-error';
+        nameInput.setAttribute('aria-describedby', nameError.id);
+        nameLabel.appendChild(nameError);
+
+        const phoneLabel = document.createElement('label');
+        phoneLabel.className = 'block text-xs font-semibold text-slate-700';
+        phoneLabel.textContent = '10-Digit US Phone Number';
+        const phoneInput = document.createElement('input');
+        phoneInput.type = 'tel';
+        phoneInput.inputMode = 'numeric';
+        phoneInput.maxLength = 14;
+        phoneInput.name = 'concierge-phone';
+        phoneInput.autocomplete = 'tel-national';
+        phoneInput.required = true;
+        phoneInput.placeholder = '(555) 234-5678';
+        phoneInput.className = 'mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-200';
+        phoneLabel.appendChild(phoneInput);
+        const phoneFeedback = phoneUtils.createPhoneFeedback(phoneInput, 'concierge-phone-error');
+        phoneUtils.bindPhoneFormatting(phoneInput, false, phoneFeedback);
+        phoneLabel.appendChild(phoneFeedback.error);
+
+        const timeLabel = document.createElement('label');
+        timeLabel.className = 'block text-xs font-semibold text-slate-700';
+        timeLabel.textContent = 'Preferred Day / Time';
+        const timeSelect = document.createElement('select');
+        timeSelect.name = 'concierge-preferred-time';
+        timeSelect.className = 'mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-200';
+        [
+          ['today-asap', 'Today / ASAP'],
+          ['tomorrow-morning', 'Tomorrow Morning'],
+          ['tomorrow-afternoon', 'Tomorrow Afternoon'],
+          ['this-week', 'This Week']
+        ].forEach(([value, label]) => {
+          const option = document.createElement('option');
+          option.value = value;
+          option.textContent = label;
+          timeSelect.appendChild(option);
+        });
+        timeLabel.appendChild(timeSelect);
+
+        const submit = document.createElement('button');
+        submit.type = 'submit';
+        submit.className = 'w-full rounded-lg bg-primary px-3 py-2.5 text-sm font-bold text-white transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2';
+        if (primaryColorOverride) {
+          submit.style.setProperty('background-color', primaryColorOverride, 'important');
+          submit.style.setProperty('outline-color', primaryColorOverride, 'important');
+        }
+        submit.textContent = 'Send Booking via SMS';
+
+        nameInput.addEventListener('input', () => {
+          if (nameInput.value.trim()) {
+            nameInput.classList.remove('border-red-500');
+            nameInput.removeAttribute('aria-invalid');
+            nameError.textContent = '';
+            nameError.classList.add('hidden');
+          }
+        });
+        form.addEventListener('submit', event => {
+          event.preventDefault();
+          if (honeypot.value.trim()) return;
+          const now = Date.now();
+          const lastSubmit = Number(form.dataset.lastSubmit || 0);
+          if (now - lastSubmit < 30000) {
+            phoneFeedback.show('Please wait 30 seconds before submitting again.');
+            return;
+          }
+          const fullName = String(nameInput.value ?? '').replace(/[\u0000-\u001F\u007F]/g, '').trim().slice(0, 100);
+          const phone = String(phoneInput.value ?? '').replace(/[\u0000-\u001F\u007F]/g, '').trim().slice(0, 14);
+          if (!fullName) {
+            nameInput.classList.add('border-red-500');
+            nameInput.setAttribute('aria-invalid', 'true');
+            nameError.textContent = 'Please enter your full name.';
+            nameError.classList.remove('hidden');
+            nameInput.focus();
+            return;
+          }
+          nameInput.classList.remove('border-red-500');
+          nameInput.removeAttribute('aria-invalid');
+          nameError.textContent = '';
+          nameError.classList.add('hidden');
+          if (!phoneUtils.isValidUSPhone(phone)) {
+            phoneFeedback.show('Please enter a valid 10-digit US phone number (e.g., (555) 234-5678).');
+            phoneInput.focus();
+            return;
+          }
+          phoneFeedback.clear();
+          form.dataset.lastSubmit = String(now);
+
+          const bookingText = [
+            `Hi ${clinicName}! I'd like to book an appointment.`,
+            `• Name: ${fullName}`,
+            `• Phone: ${phone}`,
+            `• Preferred Day / Time: ${timeSelect.selectedOptions[0].textContent}`
+          ].join('\n');
+          addMessage(`Opening your Messages app to text our concierge at ${displayPhone}. On a desktop? Call us directly instead.`, 'bot');
+          appendActions([{
+            label: 'Call Front Desk',
+            href: /^[2-9]\d{9}$/.test(phoneNumber.replace(/\D/g, '').replace(/^1/, ''))
+              ? `tel:+1${phoneNumber.replace(/\D/g, '').replace(/^1/, '')}`
+              : 'tel:+18005864621'
+          }]);
+          const smsDigits = phoneNumber.replace(/\D/g, '').replace(/^1/, '');
+          if (/^[2-9]\d{9}$/.test(smsDigits)) {
+            window.location.href = `sms:+1${smsDigits}?&body=${encodeURIComponent(bookingText)}`;
+          }
+        });
+
+        form.append(nameLabel, phoneLabel, timeLabel, submit);
+        messages.appendChild(form);
+        appendMainMenuAction();
+        scrollMessages();
+      }
+
+      function beginPricingFlow() {
+        addMessage('We offer transparent upfront pricing with or without insurance. Select a treatment below for an instant estimate:', 'bot');
+        const actions = Object.entries(config.procedures || {}).map(([key, procedure]) => {
+          const shortLabels = {
+            cleaning: 'Cleaning',
+            whitening: 'Whitening',
+            filling: 'Filling',
+            crown: 'Crown',
+            rootCanal: 'Root Canal',
+            implant: 'Implant'
+          };
+          return {
+            label: shortLabels[key] || procedure.label,
+            onClick: () => {
+              const label = shortLabels[key] || procedure.label;
+              addMessage(label, 'user');
+              addMessage(`${procedure.label}: $${Number(procedure.min).toLocaleString('en-US')} – $${Number(procedure.max).toLocaleString('en-US')}.`, 'bot');
+              appendActions([{
+                label: 'Open Full Insurance Calculator',
+                primary: true,
+                onClick: () => scrollToSection('instant-treatment-calculator')
+              }]);
+              appendMainMenuAction();
+            }
+          };
+        });
+        if (actions.length) appendActions(actions);
+        appendMainMenuAction();
+      }
+
+      function beginInsuranceFlow() {
+        const insuranceList = config.acceptedInsurancePlaceholder || 'most major PPO plans';
+        addMessage(`We accept most major PPO plans (${insuranceList}) and offer 0% APR CareCredit financing. Want our team to check your exact benefits?`, 'bot');
+        appendActions([
+          {
+            label: 'Verify My Benefits',
+            primary: true,
+            onClick: () => scrollToSection('quick-insurance-check')
+          },
+          {
+            label: 'Call Front Desk',
+            href: `tel:${phoneNumber}`
+          }
+        ]);
+        appendMainMenuAction();
+      }
+
+      function beginEmergencyFlow() {
+        addMessage(`Experiencing severe tooth pain, swelling, or a broken tooth? We reserve priority emergency slots in under 60 minutes at ${config.address}.`, 'bot');
+        const urgentText = `Hi ${clinicName}, I need urgent dental assistance. Please contact me about your next available emergency appointment.`;
+        appendActions([
+          {
+            label: 'Call Emergency Line Now',
+            primary: true,
+            href: `tel:${phoneNumber}`
+          },
+          {
+            label: 'Text Urgent Request',
+            href: (() => {
+              const digits = String(phoneNumber).replace(/\D/g, '').replace(/^1/, '');
+              return /^[2-9]\d{9}$/.test(digits)
+                ? `sms:+1${digits}?&body=${encodeURIComponent(urgentText)}`
+                : 'sms:+18005864621';
+            })()
+          }
+        ]);
+        appendMainMenuAction();
+      }
+
+      function renderQuickReplies() {
+        appendActions([
+          { label: 'Book an Appointment', onClick: () => selectFlow('booking') },
+          { label: 'Check Treatment Pricing', onClick: () => selectFlow('pricing') },
+          { label: 'Insurance & Financing', onClick: () => selectFlow('insurance') },
+          { label: '24/7 Dental Emergency', onClick: () => selectFlow('emergency') }
+        ]);
+      }
+
+      function selectFlow(flow) {
+        const labels = {
+          booking: 'Book an Appointment',
+          pricing: 'Check Treatment Pricing',
+          insurance: 'Insurance & Financing',
+          emergency: '24/7 Dental Emergency'
+        };
+        addMessage(labels[flow], 'user');
+        if (flow === 'booking') beginBookingFlow();
+        if (flow === 'pricing') beginPricingFlow();
+        if (flow === 'insurance') beginInsuranceFlow();
+        if (flow === 'emergency') beginEmergencyFlow();
+      }
+
+      function resetConversation() {
+        messages.replaceChildren();
+        const configuredWelcome = typeof settings.welcomeMessage === 'string'
+          ? settings.welcomeMessage.trim()
+          : '';
+        addMessage(configuredWelcome || `Hi! Welcome to ${clinicName}. How can our concierge help you today?`, 'bot');
+        renderQuickReplies();
+      }
+
+      function openChat() {
+        chatWindow.classList.remove('hidden');
+        chatWindow.setAttribute('aria-hidden', 'false');
+        toggleButton.classList.remove('animate-float-slow');
+        toggleButton.setAttribute('aria-expanded', 'true');
+        toggleButton.setAttribute('aria-label', `Close ${clinicName} Concierge`);
+        if (pill) {
+          pill.setAttribute('aria-expanded', 'true');
+          pill.setAttribute('aria-label', `Close ${clinicName} Concierge`);
+        }
+        const firstReply = messages.querySelector('button');
+        if (firstReply) firstReply.focus();
+      }
+
+      function closeChat(restoreFocus) {
+        chatWindow.classList.add('hidden');
+        chatWindow.setAttribute('aria-hidden', 'true');
+        toggleButton.classList.add('animate-float-slow');
+        toggleButton.setAttribute('aria-expanded', 'false');
+        toggleButton.setAttribute('aria-label', `Open ${clinicName} Concierge`);
+        if (pill) {
+          pill.setAttribute('aria-expanded', 'false');
+          pill.setAttribute('aria-label', `Open ${clinicName} Concierge`);
+        }
+        if (restoreFocus) toggleButton.focus();
+      }
+
+      function toggleChat() {
+        if (chatWindow.classList.contains('hidden')) openChat();
+        else closeChat(true);
+      }
+
+      resetButton.addEventListener('click', resetConversation);
+      closeButton.addEventListener('click', () => closeChat(true));
+      toggleButton.addEventListener('click', toggleChat);
+      if (pill) {
+        pill.addEventListener('click', toggleChat);
+        pill.addEventListener('keydown', event => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            toggleChat();
+          }
+        });
+      }
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && !chatWindow.classList.contains('hidden')) closeChat(true);
+      });
+
+      resetConversation();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initializeConcierge, { once: true });
+    } else {
+      initializeConcierge();
+    }
+  })();
+</script>
+
+<div class="fixed bottom-20 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end gap-3" id="live-chat-widget"><div class="hidden md:flex items-center gap-2 p-2.5 rounded-2xl bg-surface-container-lowest shadow-xl border border-outline-variant/30 text-xs text-on-surface"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span>Lumina Concierge is online</span></div><button aria-label="Chat with LuminaDental care concierge" class="animate-float-slow flex items-center justify-center w-14 h-14 rounded-full bg-primary text-on-primary shadow-2xl hover:scale-105 active:scale-95 transition-transform duration-300 relative focus:ring-2" id="chat-toggle-button" type="button"><span class="material-symbols-outlined text-2xl">chat</span><span class="absolute top-0 right-0 w-3.5 h-3.5 rounded-full bg-secondary border-2 border-surface-container-lowest"></span></button></div></body></html>
