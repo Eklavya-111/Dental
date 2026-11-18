@@ -1340,6 +1340,9 @@
         const email = String(CLINIC_CONFIG.frontDeskEmail).trim();
         if (/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) link.href = `mailto:${email}`;
       });
+      const contactPhone = Array.from(document.querySelectorAll('#contact p'))
+        .find(item => item.textContent.startsWith('Main Office:'));
+      if (contactPhone) contactPhone.textContent = `Main Office: ${CLINIC_CONFIG.displayPhone}`;
       document.querySelectorAll('[data-location]').forEach(location => {
         location.dataset.location = CLINIC_CONFIG.address;
       });

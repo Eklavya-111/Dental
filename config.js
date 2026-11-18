@@ -76,20 +76,39 @@ window.CLINIC_PRESETS = {
       badgeText: "Gentle Care • Modern Dentistry"
     }
   },
-  oakridge: {
-    clinicName: "Oakridge Family Dentistry",
-    logoUrl: "",
-    heroImageUrl: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80",
-    locationTagline: "Comfortable Family Dentistry • Austin",
-    displayPhone: "+1 (800) 555-0102",
-    smsAndCallNumber: "+18005550102",
-    address: "250 Oakridge Drive, Austin, TX 78701",
-    map: { googleMapsUrl: "" },
-    leadDoctor: {
-      name: "Dr. James Patel, DDS",
-      title: "Principal Dentist & Restorative Care Specialist",
-      nextAvailableSlot: "Today at 3:00 PM",
-      badgeText: "Patient-First Care • Advanced Technology"
-    }
+
+  "clarksdale-family": {
+    clinicName: "Clarksdale Family Dentistry",
+    locationTagline: "Painless Sanctuary Dentistry • Clarksdale, MS",
+    displayPhone: "(662) 624-6862",
+    smsAndCallNumber: "+16626246862",
+    address: "632 Friars Point Rd, Clarksdale, MS 38614",
+    hours: "Open 24 Hours Daily",
+    leadDoctor: { name: "Family Dentistry" }
+  },
+
+  "davis-family-pinebluff": {
+    clinicName: "Davis Family Dentistry",
+    locationTagline: "Painless Sanctuary Dentistry • Pine Bluff, AR",
+    displayPhone: "(870) 879-4870",
+    smsAndCallNumber: "+18708794870",
+    address: "4100 W 28th Ave, Pine Bluff, AR 71603",
+    hours: "Mon–Thu: 8:00 AM – 5:00 PM",
+    leadDoctor: { name: "Dr. Davis" }
+  },
+
+  "arkansas-dental-sheridan": {
+    clinicName: "Arkansas Dental Centers",
+    locationTagline: "Painless Sanctuary Dentistry • Sheridan, AR",
+    displayPhone: "(870) 942-2822",
+    smsAndCallNumber: "+18709422822",
+    address: "1310 S Rock St, Sheridan, AR 72150",
+    hours: "Mon–Wed: 8am–5pm, Thu: 8am–4pm, Fri: 8am–2pm",
+    leadDoctor: { name: "Dr.Brandon Mann" }
   }
 };
+
+// Custom URLs: append the query string to the deployed site URL.
+// ?client=clarksdale-family
+// ?client=arkansas-dental-sheridan
+// ?client=davis-family-pinebluff
