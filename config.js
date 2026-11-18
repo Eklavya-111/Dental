@@ -108,6 +108,35 @@ window.CLINIC_PRESETS = {
   }
 };
 
+(() => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const pathSlug = window.location.pathname.replace(/^\/|\/$/g, '');
+  const clientSlug = urlParams.get('client') || (pathSlug && !pathSlug.includes('.') ? pathSlug : '');
+  const preset = Object.prototype.hasOwnProperty.call(window.CLINIC_PRESETS, clientSlug)
+    ? window.CLINIC_PRESETS[clientSlug]
+    : null;
+
+  if (!preset) return;
+
+  const mergeConfig = (target, source) => {
+    Object.keys(source).forEach(key => {
+      const value = source[key];
+      if (value && typeof value === 'object' && !Array.isArray(value)) {
+        const existing = target[key];
+        target[key] = mergeConfig(
+          existing && typeof existing === 'object' && !Array.isArray(existing) ? existing : {},
+          value
+        );
+      } else {
+        target[key] = value;
+      }
+    });
+    return target;
+  };
+
+  mergeConfig(window.CLINIC_CONFIG, preset);
+})();
+
 // Custom URLs: append the query string to the deployed site URL.
 // ?client=clarksdale-family
 // ?client=arkansas-dental-sheridan
