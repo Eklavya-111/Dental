@@ -142,6 +142,85 @@ window.CLINIC_PRESETS = {
     hours: "Mon–Fri: 8am–5pm, Sat–Sun: Closed",
     leadDoctor: { name: "Dr. Rex R. Wilson, DMD" }
   },
+  "joseph-nunez-bakersfield": {
+    clinicName: "Modern Family Dentistry",
+    locationTagline: "Modern Family Dentistry • Bakersfield, CA",
+    displayPhone: "(661) 325-6907",
+    smsAndCallNumber: "+16613256907",
+    address: "1957 19th St, Bakersfield, CA 93301",
+    hours: "Mon–Wed: 8:30am–5pm, Thu: 7am–2pm, Fri–Sun: Closed",
+    leadDoctor: { name: "Dr. Joseph M. Nunez, DDS" }
+  },
+
+  "juniper-dental-fontana": {
+    clinicName: "Juniper Family Dental",
+    locationTagline: "Family & Cosmetic Dentistry • Fontana, CA",
+    displayPhone: "(909) 350-2583",
+    smsAndCallNumber: "+19093502583",
+    address: "8312 Juniper Ave, Fontana, CA 92335",
+    hours: "Mon & Wed: 8am–5pm, Tue & Thu: 9am–6pm, Fri: 8am–12pm",
+    leadDoctor: { name: "Dr. Luis R. Cambero, DDS" }
+  },
+
+  "raul-neumann-elgin": {
+    clinicName: "Dr. Raul Neumann",
+    locationTagline: "General & Restorative Dentistry • Elgin, IL",
+    displayPhone: "(847) 695-7100",
+    smsAndCallNumber: "+18476957100",
+    address: "372 Summit St, Elgin, IL 60120",
+    hours: "Mon–Fri: 9am–5pm, Sat–Sun: Closed",
+    leadDoctor: { name: "Dr. Raul Neumann, DDS" }
+  },
+
+  "rancocas-woods-mtlaurel": {
+    clinicName: "Rancocas Woods Dental",
+    locationTagline: "Family & Preventive Dentistry • Mount Laurel, NJ",
+    displayPhone: "(856) 778-8655",
+    smsAndCallNumber: "+18567788655",
+    address: "2 Rancocas Blvd, Mount Laurel, NJ 08054",
+    hours: "Mon & Wed: 9am–6pm, Tue & Thu: 11am–8pm, Sat: 9am–1pm",
+    leadDoctor: { name: "Dr. Brad J. Convissar, DMD" }
+  },
+
+  "family-dentistry-wabash": {
+    clinicName: "Family Dentistry",
+    locationTagline: "Modern Family Dentistry • Wabash, IN",
+    displayPhone: "(260) 563-4805",
+    smsAndCallNumber: "+12605634805",
+    address: "1146 N Cass St, Suite C, Wabash, IN 46992",
+    hours: "Mon–Thu: 8am–5pm, Fri–Sun: Closed",
+    leadDoctor: { name: "Dr. Robert B. Beckett Jr., DDS" }
+  },
+
+  "pediatric-dentistry-murfreesboro": {
+    clinicName: "Pediatric Dentistry",
+    locationTagline: "Gentle Pediatric Dentistry • Murfreesboro, TN",
+    displayPhone: "(615) 890-0454",
+    smsAndCallNumber: "+16158900454",
+    address: "132 Heritage Park Dr, Suite 3, Murfreesboro, TN 37129",
+    hours: "Mon–Thu: 7am–4:30pm, Fri–Sun: Closed",
+    leadDoctor: { name: "Dr. Steven E. Simpson, DDS" }
+  },
+
+  "namian-dentistry-la": {
+    clinicName: "Dr. Namian Dentistry",
+    locationTagline: "Family & Implant Dentistry • Los Angeles, CA",
+    displayPhone: "(323) 980-9768",
+    smsAndCallNumber: "+13239809768",
+    address: "609 S Atlantic Blvd, Los Angeles, CA 90022",
+    hours: "Mon–Fri: 10am–7pm, Sat: 9am–4pm, Sun: Closed",
+    leadDoctor: { name: "Dr. Mahmoud Namian, DDS" }
+  },
+
+  "dental-smile-makeover-ga": {
+    clinicName: "Dental Smile Makeover",
+    locationTagline: "Cosmetic & General Dentistry • College Park, GA",
+    displayPhone: "(770) 991-0212",
+    smsAndCallNumber: "+17709910212",
+    address: "2090 Godby Rd, College Park, GA 30349",
+    hours: "Mon–Thu: 9am–1pm, Fri–Sun: Closed",
+    leadDoctor: { name: "Dr. Dental Smile Makeover Team" }
+  },
 };
 
 (() => {
