@@ -125,7 +125,7 @@ window.CLINIC_PRESETS = {
     leadDoctor: { name: "Dr. R. Mark Owens, DMD" }
   },
   "george-stacey-gadsden": {
-    clinicName: "George C. Family Dentistry",
+    clinicName: "George C.Family Dentistry",
     locationTagline: "Modern Family Dentistry • Gadsden, AL",
     displayPhone: "(256) 546-4947",
     smsAndCallNumber: "+12565464947",
@@ -134,7 +134,7 @@ window.CLINIC_PRESETS = {
     leadDoctor: { name: "Dr. George C. Stacey Jr., DMD" }
   },
   "rex-wilson-gadsden": {
-    clinicName: "Rex R. Wilson, DMD Family Dentistry",
+    clinicName: "Rex Wilson, DMD Family Dentistry",
     locationTagline: "Complete Dental Care • Gadsden, AL",
     displayPhone: "(256) 543-9046",
     smsAndCallNumber: "+12565439046",
