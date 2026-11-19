@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="scroll-smooth" lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'nonce-lumina-csp-2026'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'none'; form-action 'self' https://api.web3forms.com; object-src 'none'; base-uri 'self'; frame-src 'none'; upgrade-insecure-requests"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link rel="icon" type="image/png" href="./images/winking-tooth-character-free-png.webp"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'nonce-lumina-csp-2026'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'self' https://docs.google.com https://*.googleusercontent.com; form-action 'self' https://api.web3forms.com; object-src 'none'; base-uri 'self'; frame-src 'none'; upgrade-insecure-requests"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link rel="icon" type="image/png" href="./images/winking-tooth-character-free-png.webp"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>
   @layer base { 
     html, body { margin: 0; padding: 0; scroll-behavior: smooth; } 
@@ -1149,28 +1149,16 @@
 <script nonce="lumina-csp-2026">
   const CLINIC_CONFIG = window.CLINIC_CONFIG;
   if (!CLINIC_CONFIG) throw new Error('config.js must define window.CLINIC_CONFIG before code.html initializes.');
-  (() => {
+  window.CLINIC_CONFIG_READY = (async () => {
     const params = new URLSearchParams(window.location.search);
-    const clientKey = params.get('client')?.toLowerCase().trim();
-    const presets = window.CLINIC_PRESETS;
-    if (clientKey && presets && Object.prototype.hasOwnProperty.call(presets, clientKey)) {
-      const mergeConfig = (target, source) => {
-        Object.keys(source).forEach(key => {
-          const value = source[key];
-          if (value && typeof value === 'object' && !Array.isArray(value)) {
-            const existing = target[key];
-            target[key] = mergeConfig(
-              existing && typeof existing === 'object' && !Array.isArray(existing) ? existing : {},
-              value
-            );
-          } else {
-            target[key] = value;
-          }
-        });
-        return target;
-      };
-      mergeConfig(CLINIC_CONFIG, presets[clientKey]);
-    }
+    const querySlug = params.get('client')?.trim();
+    const pathSlug = window.location.pathname.replace(/^\/+|\/+$/g, '');
+    const slug = (querySlug || (pathSlug && !pathSlug.includes('.') ? pathSlug : '') ||
+      'george-stacey-gadsden').toLowerCase();
+    const clinicConfig = await loadClinicConfig(slug);
+    Object.assign(CLINIC_CONFIG, clinicConfig, {
+      leadDoctor: { ...CLINIC_CONFIG.leadDoctor, ...clinicConfig.leadDoctor }
+    });
 
     const readQueryOverride = (key, maxLength) => {
       const value = params.get(key);
@@ -2221,7 +2209,8 @@
 
 <script nonce="lumina-csp-2026">
   (() => {
-    function initializeConcierge() {
+    async function initializeConcierge() {
+      await window.CLINIC_CONFIG_READY;
       const config = window.CLINIC_CONFIG;
       const widget = document.getElementById('live-chat-widget');
       const toggleButton = document.getElementById('chat-toggle-button');
@@ -2704,14 +2693,6 @@
 
 
 
-  // Example in your main script / index.html:
-document.addEventListener("DOMContentLoaded", async () => {
-  const params = new URLSearchParams(window.location.search);
-  const slug = params.get("client") || window.location.pathname.replace(/^\/+|\/+$/g, "") || "george-stacey-gadsden";
-
-  const config = await loadClinicConfig(slug);
-  // Render your page using `config.clinicName`, `config.locationTagline`, etc.
-});
 </script>
 
 <div class="fixed bottom-20 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end gap-3" id="live-chat-widget"><div class="hidden md:flex items-center gap-2 p-2.5 rounded-2xl bg-surface-container-lowest shadow-xl border border-outline-variant/30 text-xs text-on-surface"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span>Lumina Concierge is online</span></div><button aria-label="Chat with LuminaDental care concierge" class="animate-float-slow flex items-center justify-center w-14 h-14 rounded-full bg-primary text-on-primary shadow-2xl hover:scale-105 active:scale-95 transition-transform duration-300 relative focus:ring-2" id="chat-toggle-button" type="button"><span class="material-symbols-outlined text-2xl">chat</span><span class="absolute top-0 right-0 w-3.5 h-3.5 rounded-full bg-secondary border-2 border-surface-container-lowest"></span></button></div></body></html>
