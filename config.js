@@ -1,4 +1,4 @@
-const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSsEbwx6smPFQ4nc-fQHTUL4Rk3ZgKMP1I4AWsaxj7f8WzuZgvDKms8NOiKuRXWZR_oJnjFYpA7OJ1N/pub?output=csv";
+const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSsEbwx6smPFQ4nc-fQHTUL4Rk3ZgKMP1I4AWsaxj7f8WzuZgvDKms8NOiKuRXWZR_oJnjFYpA7OJ1N/pub?gid=0&single=true&output=csv";
 const FALLBACK_PRESETS = {
   "george-stacey-gadsden": {
     clinicName: "George Family Dentistry",
