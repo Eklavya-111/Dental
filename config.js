@@ -1,3 +1,83 @@
+const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSsEbwx6smPFQ4nc-fQHTUL4Rk3ZgKMP1I4AWsaxj7f8WzuZgvDKms8NOiKuRXWZR_oJnjFYpA7OJ1N/pubhtml";
+
+const FALLBACK_PRESETS = {
+  "george-stacey-gadsden": {
+    clinicName: "George Family Dentistry",
+    locationTagline: "Modern Family Dentistry • Gadsden, AL",
+    displayPhone: "(256) 546-4947",
+    smsAndCallNumber: "+12565464947",
+    address: "938 Forrest Ave, Gadsden, AL 35901",
+    hours: "Mon–Fri: 8am–5pm, Sat–Sun: Closed",
+    leadDoctor: { name: "Dr. George C. Stacey Jr., DMD" }
+  }
+};
+
+function parseCSV(text) {
+  const rows = [];
+  let row = [], cell = "", inQuotes = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i], next = text[i + 1];
+    if (ch === '"' && inQuotes && next === '"') { cell += '"'; i++; }
+    else if (ch === '"') { inQuotes = !inQuotes; }
+    else if (ch === ',' && !inQuotes) { row.push(cell.trim()); cell = ""; }
+    else if ((ch === '\n' || (ch === '\r' && next === '\n')) && !inQuotes) {
+      if (ch === '\r') i++;
+      row.push(cell.trim());
+      if (row.some(Boolean)) rows.push(row);
+      row = []; cell = "";
+    } else {
+      cell += ch;
+    }
+  }
+  if (cell || row.length) { row.push(cell.trim()); rows.push(row); }
+  return rows;
+}
+
+async function loadClinicConfig(slug) {
+  try {
+    const res = await fetch(`${SHEET_CSV_URL}&t=${Math.floor(Date.now() / 60000)}`);
+    const rows = parseCSV(await res.text());
+
+    // Locate the table header row (Row 8 in your sheet)
+    const headerIndex = rows.findIndex(r => r.includes("Clinic Name") && r.includes("slug"));
+    if (headerIndex !== -1) {
+      const headers = rows[headerIndex];
+      const col = Object.fromEntries(headers.map((h, i) => [h.trim(), i]));
+      const match = rows.slice(headerIndex + 1).find(r => r[col["slug"]] === slug);
+
+      if (match) {
+        return {
+          clinicName: match[col["Clinic Name"]],
+          locationTagline: match[col["locationTagline"]],
+          displayPhone: match[col["Phone Number"]],
+          smsAndCallNumber: match[col["smsAndCallNumber"]],
+          address: match[col["address"]],
+          hours: match[col["hours"]],
+          leadDoctor: { name: match[col["leadDoctorName"]] }
+        };
+      }
+    }
+  } catch (err) {
+    console.warn("Falling back to default preset:", err);
+  }
+  return FALLBACK_PRESETS[slug] || Object.values(FALLBACK_PRESETS)[0];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 window.CLINIC_CONFIG = {
   // Brand & Visuals
   clinicName: "LuminaDental",
