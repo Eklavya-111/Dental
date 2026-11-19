@@ -125,7 +125,7 @@ window.CLINIC_PRESETS = {
     leadDoctor: { name: "Dr. R. Mark Owens, DMD" }
   },
   "george-stacey-gadsden": {
-    clinicName: "George C.Family Dentistry",
+    clinicName: "George Family Dentistry",
     locationTagline: "Modern Family Dentistry • Gadsden, AL",
     displayPhone: "(256) 546-4947",
     smsAndCallNumber: "+12565464947",
