@@ -105,6 +105,38 @@ window.CLINIC_PRESETS = {
     address: "1310 S Rock St, Sheridan, AR 72150",
     hours: "Mon–Wed: 8am–5pm, Thu: 8am–4pm, Fri: 8am–2pm",
     leadDoctor: { name: "Dr.Brandon Mann" }
+  },
+  "polk-dental-richland": {
+    name: "Polk Dental Center",
+    doctor: "Dr. Jason Polk & Dr. Lexi Polk, DMD",
+    city: "Richland, MS",
+    phone: "(601) 932-0606",
+    address: "150 Scarbrough St, Richland, MS 39218",
+    hours: "Mon–Thu: 8:00 AM – 4:30 PM | Fri–Sun: Closed"
+  },
+  "mark-owens-pearl": {
+    name: "Mark Owens Family Dentistry",
+    doctor: "Dr. R. Mark Owens, DMD",
+    city: "Pearl, MS",
+    phone: "(601) 939-2377",
+    address: "642 S Pearson Rd, Pearl, MS 39208",
+    hours: "Mon–Fri: 8:00 AM – 5:00 PM | Sat–Sun: Closed"
+  },
+  "george-stacey-gadsden": {
+    name: "George C. Stacey Jr. Family Dentistry",
+    doctor: "Dr. George C. Stacey Jr., DMD",
+    city: "Gadsden, AL",
+    phone: "(256) 546-4947",
+    address: "938 Forrest Ave, Gadsden, AL 35901",
+    hours: "Mon–Fri: 8:00 AM – 5:00 PM | Sat–Sun: Closed"
+  },
+  "rex-wilson-gadsden": {
+    name: "Rex R. Wilson, DMD Family Dentistry",
+    doctor: "Dr. Rex R. Wilson, DMD",
+    city: "Gadsden, AL",
+    phone: "(256) 543-9046",
+    address: "522 Walnut St, Gadsden, AL 35901",
+    hours: "Mon–Fri: 8:00 AM – 5:00 PM | Sat–Sun: Closed"
   }
 };
 
