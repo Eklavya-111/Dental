@@ -107,37 +107,41 @@ window.CLINIC_PRESETS = {
     leadDoctor: { name: "Dr.Brandon Mann" }
   },
   "polk-dental-richland": {
-    name: "Polk Dental Center",
-    doctor: "Dr. Jason Polk & Dr. Lexi Polk, DMD",
-    city: "Richland, MS",
-    phone: "(601) 932-0606",
+    clinicName: "Polk Dental Center",
+    locationTagline: "Compassionate Family Dentistry • Richland, MS",
+    displayPhone: "(601) 932-0606",
+    smsAndCallNumber: "+16019320606",
     address: "150 Scarbrough St, Richland, MS 39218",
-    hours: "Mon–Thu: 8:00 AM – 4:30 PM | Fri–Sun: Closed"
+    hours: "Mon–Tue: 8am–4:30pm, Wed: 8:30am–4:30pm, Thu: 8am–4:30pm",
+    leadDoctor: { name: "Dr. Jason & Dr. Lexi Polk, DMD" }
   },
   "mark-owens-pearl": {
-    name: "Mark Owens Family Dentistry",
-    doctor: "Dr. R. Mark Owens, DMD",
-    city: "Pearl, MS",
-    phone: "(601) 939-2377",
+    clinicName: "Mark Owens Family Dentistry",
+    locationTagline: "Trusted Family Dental Care • Pearl, MS",
+    displayPhone: "(601) 939-2377",
+    smsAndCallNumber: "+16019392377",
     address: "642 S Pearson Rd, Pearl, MS 39208",
-    hours: "Mon–Fri: 8:00 AM – 5:00 PM | Sat–Sun: Closed"
+    hours: "Mon–Fri: 8am–5pm, Sat–Sun: Closed",
+    leadDoctor: { name: "Dr. R. Mark Owens, DMD" }
   },
   "george-stacey-gadsden": {
-    name: "George C. Stacey Jr. Family Dentistry",
-    doctor: "Dr. George C. Stacey Jr., DMD",
-    city: "Gadsden, AL",
-    phone: "(256) 546-4947",
+    clinicName: "George C. Stacey Jr. Family Dentistry",
+    locationTagline: "Modern Family Dentistry • Gadsden, AL",
+    displayPhone: "(256) 546-4947",
+    smsAndCallNumber: "+12565464947",
     address: "938 Forrest Ave, Gadsden, AL 35901",
-    hours: "Mon–Fri: 8:00 AM – 5:00 PM | Sat–Sun: Closed"
+    hours: "Mon–Fri: 8am–5pm, Sat–Sun: Closed",
+    leadDoctor: { name: "Dr. George C. Stacey Jr., DMD" }
   },
   "rex-wilson-gadsden": {
-    name: "Rex R. Wilson, DMD Family Dentistry",
-    doctor: "Dr. Rex R. Wilson, DMD",
-    city: "Gadsden, AL",
-    phone: "(256) 543-9046",
+    clinicName: "Rex R. Wilson, DMD Family Dentistry",
+    locationTagline: "Complete Dental Care • Gadsden, AL",
+    displayPhone: "(256) 543-9046",
+    smsAndCallNumber: "+12565439046",
     address: "522 Walnut St, Gadsden, AL 35901",
-    hours: "Mon–Fri: 8:00 AM – 5:00 PM | Sat–Sun: Closed"
-  }
+    hours: "Mon–Fri: 8am–5pm, Sat–Sun: Closed",
+    leadDoctor: { name: "Dr. Rex R. Wilson, DMD" }
+  },
 };
 
 (() => {
