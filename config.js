@@ -116,7 +116,7 @@ window.CLINIC_PRESETS = {
     leadDoctor: { name: "Dr. Jason & Dr. Lexi Polk, DMD" }
   },
   "mark-owens-pearl": {
-    clinicName: "Mark Owens Family Dentistry",
+    clinicName: "Mark Family Dentistry",
     locationTagline: "Trusted Family Dental Care • Pearl, MS",
     displayPhone: "(601) 939-2377",
     smsAndCallNumber: "+16019392377",
@@ -134,7 +134,7 @@ window.CLINIC_PRESETS = {
     leadDoctor: { name: "Dr. George C. Stacey Jr., DMD" }
   },
   "rex-wilson-gadsden": {
-    clinicName: "Rex Wilson, DMD Family Dentistry",
+    clinicName: "Rex Family Dentistry",
     locationTagline: "Complete Dental Care • Gadsden, AL",
     displayPhone: "(256) 543-9046",
     smsAndCallNumber: "+12565439046",
